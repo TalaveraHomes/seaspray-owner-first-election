@@ -1,18 +1,18 @@
-# Seaspray Owners First Election Website (v7)
+# Seaspray Owners First Election Website (v8)
 
-This package updates the "What Seaspray Owners Deserve" section with a more polished, shareholder-report style graphic.
+This package makes the latest visual polish changes.
 
 ## Changes in this version
-- Replaced the icon row under "What Seaspray Owners Deserve" with a more professional full-width graphic
-- Added the new asset: `assets/owners-deserve-pillars.png`
-- Added cache-busting with `styles-v7.css` and `script-v7.js`
-- Keeps the still-photo hero and the current candidate card layout from v6
+- The aerial Seaspray photo now fills the entire white photo card.
+- The professional “What Seaspray Owners Deserve” graphic has been cropped tighter.
+- Removed the large outer box around the “What Seaspray Owners Deserve” graphic.
+- Added cache-busting with `styles-v8.css` and `script-v8.js`.
 
 ## Files to upload/replace in GitHub
 Upload:
 - `index.html`
-- `styles-v7.css`
-- `script-v7.js`
+- `styles-v8.css`
+- `script-v8.js`
 - `README.md`
 - the full `assets` folder
 
