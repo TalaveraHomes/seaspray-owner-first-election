@@ -1,28 +1,34 @@
-# Seaspray Owners First Election Website
+# Seaspray Owners First Election Website (Updated)
 
-This is a static website designed for GitHub Pages.
+This package replaces the previous version of the GitHub Pages site.
 
-## Publish on GitHub Pages
+## Files included
+- `index.html`
+- `styles.css`
+- `script.js`
+- `README.md`
+- `assets/` folder with updated logos and photos
 
-1. Create a new public repository named `seaspray-owner-first-election`.
-2. Upload all files in this folder to the repository root.
-3. Go to Settings > Pages.
-4. Under Build and deployment, choose `Deploy from a branch`.
-5. Select branch `main` and folder `/root`, then Save.
-6. Your site should publish at: `https://YOUR-GITHUB-USERNAME.github.io/seaspray-owner-first-election/`
+## What changed
+- Added the new **Seaspray Owners First** logo
+- Replaced the main hero image with a stronger coastal image
+- Added real Seaspray photos in place of generic placeholders
+- Added **Roberto Giacomelli** family photo
+- Added **Zachary Moody** family photo and name
+- Updated the site branding to match Seaspray colors more closely
 
-## Edit before publishing
+## To replace the live site on GitHub
+1. Open your repository.
+2. Click **Add file** > **Upload files**.
+3. Drag in all of the files from this folder (`index.html`, `styles.css`, `script.js`, `README.md`, and the full `assets` folder).
+4. If GitHub asks whether to replace files, choose **replace**.
+5. Commit the changes.
+6. Wait a minute and refresh your GitHub Pages site.
 
-Replace these placeholders in `index.html`:
+## Optional future upgrade: looping hero video
+If you later want a looping drone video in the hero area, upload a file named `hero-loop.mp4` into the `assets` folder and we can update the hero section to use it.
 
-- `YOUR_TALLY_SURVEY_LINK_HERE`
-- `YOUR_TOWNHALL_REGISTRATION_LINK_HERE`
-- Third Candidate name/bio/photo when available
-- Town hall date and time when finalized
-
-## Files
-
-- `index.html` - website content
-- `styles.css` - design and responsive layout
-- `script.js` - mobile menu behavior
-- `assets/` - logo, images, and placeholders
+## Still to customize
+- Replace `YOUR_TALLY_SURVEY_LINK_HERE`
+- Replace `YOUR_TOWNHALL_REGISTRATION_LINK_HERE`
+- Update the town hall date and time once finalized
