@@ -1,28 +1,27 @@
-# Seaspray Owners First Election Website (v4)
+# Seaspray Owners First Election Website (v5)
 
-This package replaces the previous GitHub Pages version and addresses the latest requested changes.
+This package addresses the latest requested changes.
 
 ## Changes in this version
-- Added hero video support with fallback image
-- Improved candidate photo cropping for desktop and smaller desktop sizes
-- Replaced remaining generic imagery with real Seaspray photos
-- Added updated candidate lineup with Zachary Moody
-- Added cache-busting by switching the site to `styles-v4.css` and `script-v4.js`
+- Added an actual looping `assets/hero-loop.mp4` background video made from Seaspray imagery
+- Removed the small generic Seaspray Beach Vacation Rentals badge from the hero
+- Updated the hero line to: `Three board seats = One incredible opportunity to put owners first!`
+- Removed the `3 of 5 Board Seats Are Open` icon row from the `Why This Election Matters` section
+- Changed heading to `Meet the Owners First Candidates`
+- Reframed Eric and Roberto photos so heads are not cropped off
+- Replaced cartoon emoji icons with cleaner professional line-style icons
+- Improved the contrast on the `Owners Today. A Stronger Seaspray Tomorrow.` photo text
+- Added cache-busting with `styles-v5.css` and `script-v5.js`
 
-## Important note about the hero video
-This version is already coded to play a looping drone video in the hero section **if** a file named `hero-loop.mp4` is added to the `assets` folder.
-
-Because no video file was available in the working files, the site will currently show the fallback hero photo. If you later upload `assets/hero-loop.mp4`, the video will automatically play.
-
-## Files to upload to GitHub
-Upload/replace these:
+## Files to upload/replace in GitHub
+Upload:
 - `index.html`
-- `styles-v4.css`
-- `script-v4.js`
+- `styles-v5.css`
+- `script-v5.js`
 - `README.md`
-- entire `assets` folder
+- the full `assets` folder, including `hero-loop.mp4`
 
 ## Still to customize
 - Replace `YOUR_TALLY_SURVEY_LINK_HERE`
 - Replace `YOUR_TOWNHALL_REGISTRATION_LINK_HERE`
-- Add `assets/hero-loop.mp4` if you want the hero background video live
+- Update the town hall date/time once finalized
