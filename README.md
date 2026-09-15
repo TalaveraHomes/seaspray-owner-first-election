@@ -1,25 +1,21 @@
-# Seaspray Owners First Election Website (v5)
+# Seaspray Owners First Election Website (v6)
 
-This package addresses the latest requested changes.
+This package makes the latest requested visual adjustments.
 
 ## Changes in this version
-- Added an actual looping `assets/hero-loop.mp4` background video made from Seaspray imagery
-- Removed the small generic Seaspray Beach Vacation Rentals badge from the hero
-- Updated the hero line to: `Three board seats = One incredible opportunity to put owners first!`
-- Removed the `3 of 5 Board Seats Are Open` icon row from the `Why This Election Matters` section
-- Changed heading to `Meet the Owners First Candidates`
-- Reframed Eric and Roberto photos so heads are not cropped off
-- Replaced cartoon emoji icons with cleaner professional line-style icons
-- Improved the contrast on the `Owners Today. A Stronger Seaspray Tomorrow.` photo text
-- Added cache-busting with `styles-v5.css` and `script-v5.js`
+- Removed the shaking hero video and reverted the hero to the still image
+- Restored the three candidate photos to the full-photo card style
+- Adjusted Eric's photo framing to better preserve the two tallest heads
+- Kept the other recent design/content refinements in place
+- Added cache-busting with `styles-v6.css` and `script-v6.js`
 
 ## Files to upload/replace in GitHub
 Upload:
 - `index.html`
-- `styles-v5.css`
-- `script-v5.js`
+- `styles-v6.css`
+- `script-v6.js`
 - `README.md`
-- the full `assets` folder, including `hero-loop.mp4`
+- the full `assets` folder if GitHub prompts you to replace files
 
 ## Still to customize
 - Replace `YOUR_TALLY_SURVEY_LINK_HERE`
