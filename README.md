@@ -26,3 +26,6 @@ Update notes v9:
 - Connected the Owner Survey button to https://tally.so/r/gDElo1
 - Added an embedded Tally owner survey directly on the Survey section of the homepage
 - Added Tally embed script before the site script
+
+
+V10 update: top header Survey and Take Survey buttons, hero Take the Survey, and Share Your Concerns now link directly to https://tally.so/r/gDElo1.
