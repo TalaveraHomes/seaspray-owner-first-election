@@ -4,3 +4,31 @@
 .deserve-graphic-card{background:transparent;border:0;border-radius:0;box-shadow:none;padding:0;overflow:visible}
 .deserve-graphic-card img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
 @media(max-width:700px){.photo-card{height:220px}.deserve-graphic-card img{border-radius:12px}}
+
+/* Embedded owner survey */
+.survey-embed-wrap {
+  margin-top: 28px;
+}
+
+.survey-embed-card {
+  background: rgba(255,255,255,.96);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 24px 70px rgba(9, 42, 66, .16);
+  border: 1px solid rgba(6,60,99,.08);
+}
+
+.survey-embed-card iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .survey-embed-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+}

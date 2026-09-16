@@ -20,3 +20,9 @@ Upload:
 - Replace `YOUR_TALLY_SURVEY_LINK_HERE`
 - Replace `YOUR_TOWNHALL_REGISTRATION_LINK_HERE`
 - Update the town hall date/time once finalized
+
+
+Update notes v9:
+- Connected the Owner Survey button to https://tally.so/r/gDElo1
+- Added an embedded Tally owner survey directly on the Survey section of the homepage
+- Added Tally embed script before the site script
