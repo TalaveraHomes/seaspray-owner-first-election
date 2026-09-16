@@ -166,17 +166,13 @@
   </style>
 
 
-  <style id="meet-eric-v20-overrides">
-    /* v20: closer to approved render references */
+  <style id="meet-eric-v21-overrides">
+    /* v21: clean split hero so text does not cover people */
     .eric-hero{
-      min-height:390px !important;
-      padding:0 !important;
+      min-height:auto !important;
+      padding:24px 0 34px !important;
       overflow:hidden !important;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.93) 25%, rgba(255,255,255,.35) 50%, rgba(255,255,255,.05) 78%),
-        url('assets/eric-hero-beach-family.png') !important;
-      background-size:cover !important;
-      background-position:center 42% !important;
+      background:linear-gradient(180deg,#eef9fb 0%,#ffffff 100%) !important;
       border-bottom:8px solid #d8f0f2 !important;
     }
     .eric-hero:after{
@@ -193,66 +189,78 @@
     .eric-hero-inner{
       position:relative !important;
       z-index:2 !important;
-      min-height:390px !important;
+      min-height:0 !important;
       display:grid !important;
-      grid-template-columns:330px 1fr !important;
-      align-items:center !important;
-      gap:28px !important;
+      grid-template-columns:340px minmax(0,1fr) !important;
+      gap:26px !important;
+      align-items:stretch !important;
     }
     .eric-hero-inner:after{
-      display:none !important;
-      content:none !important;
+      content:"" !important;
+      display:block !important;
+      grid-column:2 !important;
+      grid-row:1 !important;
+      min-height:390px !important;
+      border-radius:20px !important;
+      overflow:hidden !important;
+      box-shadow:var(--shadow) !important;
+      border:1px solid var(--line) !important;
+      background-image:url('assets/eric-hero-beach-family.png') !important;
+      background-size:cover !important;
+      background-position:center center !important;
     }
     .eric-hero-copy{
-      padding:28px 0 40px !important;
+      position:relative !important;
+      z-index:3 !important;
+      padding:18px 0 32px !important;
       background:transparent !important;
       border-radius:0 !important;
+      display:flex !important;
+      flex-direction:column !important;
+      justify-content:center !important;
     }
     .eric-hero h1{
-      font-size:clamp(58px,6.1vw,88px) !important;
-      line-height:.87 !important;
+      font-size:clamp(58px,6.1vw,86px) !important;
+      line-height:.88 !important;
       margin-bottom:15px !important;
     }
     .eric-hero .intro{
-      max-width:310px !important;
+      max-width:320px !important;
       font-size:16px !important;
       line-height:1.45 !important;
       color:#11364e !important;
     }
     .hero-script-left{
-      max-width:315px !important;
-      font-size:30px !important;
-      line-height:1.05 !important;
-      margin-top:18px !important;
-    }
-    .hero-actions{
-      margin-top:20px !important;
+      max-width:320px !important;
+      font-size:29px !important;
+      line-height:1.06 !important;
+      margin-top:17px !important;
     }
     .hero-script-right{
       position:absolute !important;
-      z-index:3 !important;
-      right:calc(4vw + 10px) !important;
-      top:84px !important;
+      z-index:4 !important;
+      right:calc(4vw + 22px) !important;
+      top:66px !important;
       max-width:250px !important;
       text-align:right !important;
       color:#0b4a75 !important;
-      font-size:35px !important;
+      font-size:34px !important;
       line-height:1.03 !important;
       transform:rotate(-6deg) !important;
       text-shadow:0 2px 10px rgba(255,255,255,.95),0 0 2px rgba(255,255,255,.9) !important;
-      background:transparent !important;
-      padding:0 !important;
-      border-radius:0 !important;
+      background:rgba(255,255,255,.35) !important;
+      padding:6px 10px !important;
+      border-radius:12px !important;
     }
     .eric-hero .btn{
       padding:13px 22px !important;
       font-size:12px !important;
     }
 
-    /* Leroy photo row like the approved reference: wider photos, smaller text card */
+    /* Leroy row: no tall blank bottoms; make the photos and text fill naturally */
     .story-grid.thirds{
-      grid-template-columns:.92fr 1.08fr !important;
-      gap:26px !important;
+      grid-template-columns:0.88fr 1.12fr !important;
+      gap:28px !important;
       align-items:stretch !important;
     }
     .photo-pair{
@@ -263,57 +271,58 @@
     }
     .caption-photo{
       min-height:0 !important;
-      height:100% !important;
+      height:auto !important;
       border-radius:16px !important;
+      display:flex !important;
+      flex-direction:column !important;
     }
     .caption-photo img{
-      height:330px !important;
+      height:295px !important;
       width:100% !important;
       object-fit:cover !important;
       object-position:center center !important;
+      flex:0 0 auto !important;
     }
     .caption-photo span{
-      min-height:62px !important;
+      min-height:60px !important;
       display:flex !important;
       align-items:center !important;
       justify-content:center !important;
       text-align:center !important;
       line-height:1.2 !important;
       font-size:16px !important;
-      padding:12px 10px !important;
+      padding:11px 10px !important;
+      flex:0 0 auto !important;
     }
     .more-beach-copy{
       padding:30px 34px !important;
+      align-self:stretch !important;
     }
     .more-beach-copy h2{
-      font-size:clamp(35px,3.6vw,52px) !important;
-      margin-bottom:18px !important;
+      font-size:clamp(34px,3.3vw,48px) !important;
+      margin-bottom:17px !important;
     }
     .more-beach-copy p{
-      font-size:19px !important;
+      font-size:18px !important;
       line-height:1.58 !important;
     }
 
     @media(max-width:980px){
-      .eric-hero{
-        min-height:430px !important;
-        background-position:center center !important;
-      }
       .eric-hero-inner{
-        min-height:430px !important;
         grid-template-columns:1fr !important;
       }
-      .eric-hero-copy{
-        width:min(92vw,420px) !important;
-        padding:26px 18px 32px !important;
-        background:rgba(255,255,255,.78) !important;
-        border-radius:0 0 20px 20px !important;
+      .eric-hero-inner:after{
+        grid-column:1 !important;
+        grid-row:2 !important;
+        min-height:360px !important;
+      }
+      .eric-hero .intro{
+        max-width:760px !important;
       }
       .hero-script-right{
         top:auto !important;
-        right:6vw !important;
-        bottom:56px !important;
-        font-size:30px !important;
+        right:7vw !important;
+        bottom:82px !important;
       }
       .story-grid.thirds{
         grid-template-columns:1fr !important;
@@ -321,17 +330,10 @@
       .photo-pair{
         grid-template-columns:1fr 1fr !important;
       }
-      .caption-photo img{
-        height:300px !important;
-      }
     }
     @media(max-width:680px){
-      .eric-hero{
-        min-height:610px !important;
-        background-position:62% center !important;
-      }
-      .eric-hero-inner{
-        min-height:610px !important;
+      .eric-hero-inner:after{
+        min-height:300px !important;
       }
       .hero-script-right{
         position:static !important;
@@ -340,9 +342,6 @@
         margin:16px auto 0 !important;
         text-align:center !important;
         transform:none !important;
-        background:rgba(255,255,255,.85) !important;
-        padding:10px 14px !important;
-        border-radius:12px !important;
       }
       .photo-pair{
         grid-template-columns:1fr !important;
