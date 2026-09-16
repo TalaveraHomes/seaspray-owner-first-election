@@ -17,7 +17,7 @@ Upload:
 - the full `assets` folder
 
 ## Still to customize
-- Replace `YOUR_TALLY_SURVEY_LINK_HERE`
+- Owner survey links are already connected to https://tally.so/r/gDElo1 and open in a new tab
 - Replace `YOUR_TOWNHALL_REGISTRATION_LINK_HERE`
 - Update the town hall date/time once finalized
 
@@ -29,3 +29,5 @@ Update notes v9:
 
 
 V10 update: top header Survey and Take Survey buttons, hero Take the Survey, and Share Your Concerns now link directly to https://tally.so/r/gDElo1.
+
+V11 update: every survey-related navigation item and button, including Survey, Take Survey, Take the Survey, Take the Owner Survey, and Share Your Concerns, opens the Tally survey directly in a new browser tab.
