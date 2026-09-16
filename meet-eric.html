@@ -6,6 +6,420 @@
   <title>Meet Eric | Seaspray Owners First</title>
   <meta name="description" content="Learn more about Eric Stensrud, his family's connection to Seaspray, his service, and his professional background." />
   <link rel="stylesheet" href="styles-v9.css" />
+  <style>
+    :root{
+      --navy:#063c63;
+      --deep:#052d49;
+      --teal:#0aa1a7;
+      --gold:#d5b05c;
+      --sand:#f7efdf;
+      --mist:#ecf5f8;
+      --ink:#183247;
+      --muted:#5d6f80;
+      --white:#fff;
+      --line:#dbe8ef;
+      --shadow:0 18px 45px rgba(6,60,99,.14);
+    }
+    *{box-sizing:border-box}
+    body.meet-eric-page{
+      margin:0;
+      font-family:Inter, Arial, sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.45;
+    }
+    .meet-eric-page a{color:inherit}
+    .meet-eric-page .container{width:min(1180px,92vw);margin:0 auto}
+    .meet-eric-page .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      min-height:84px;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:22px;
+      padding:8px 3vw;
+    }
+    .meet-eric-page .brand img{width:285px;display:block}
+    .meet-eric-page .nav{
+      display:flex;
+      gap:18px;
+      margin-left:auto;
+      align-items:center;
+    }
+    .meet-eric-page .nav a{
+      text-decoration:none;
+      font-size:14px;
+      font-weight:750;
+      color:var(--deep);
+      opacity:.95;
+      white-space:nowrap;
+    }
+    .meet-eric-page .nav a:hover{color:var(--teal)}
+    .meet-eric-page .header-cta{
+      padding:12px 24px;
+      border-radius:10px;
+      background:var(--navy);
+      color:white;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      font-weight:900;
+      font-size:13px;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .meet-eric-page .menu-toggle{
+      display:none;
+      background:var(--navy);
+      color:white;
+      border:0;
+      border-radius:8px;
+      padding:9px 12px;
+      margin-left:auto;
+      font-size:19px;
+    }
+    .meet-eric-page h1,
+    .meet-eric-page h2,
+    .meet-eric-page h3{
+      font-family:Georgia,'Times New Roman',serif;
+      color:var(--navy);
+      line-height:1.03;
+      margin:0;
+    }
+    .meet-eric-page p{margin:0 0 14px}
+    .meet-eric-page .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.32em;
+      font-size:12px;
+      font-weight:900;
+      color:var(--teal);
+      margin:0 0 10px;
+    }
+    .meet-eric-page .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      padding:15px 26px;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      font-weight:900;
+      text-decoration:none;
+      border:2px solid var(--navy);
+      box-shadow:0 8px 18px rgba(6,60,99,.1);
+    }
+    .meet-eric-page .btn-primary{background:var(--navy);color:white}
+    .meet-eric-page .btn-white{background:white;color:var(--navy)}
+    .meet-eric-page .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+
+    /* HERO */
+    .meet-hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.88) 34%,rgba(255,255,255,.08) 72%),
+        linear-gradient(180deg,#edf8fb 0%,#fff 100%);
+      padding:30px 0 26px;
+    }
+    .meet-hero:after{
+      content:"";
+      position:absolute;
+      left:-4vw;right:-4vw;bottom:-36px;
+      height:74px;
+      background:#fff;
+      border-radius:50% 50% 0 0;
+      z-index:1;
+    }
+    .meet-hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:360px 1fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .meet-hero-copy{
+      padding:24px 0 18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .meet-hero-copy h1{
+      font-size:clamp(62px,7.2vw,104px);
+      line-height:.87;
+      margin-bottom:18px;
+    }
+    .meet-intro{
+      font-size:18px;
+      line-height:1.5;
+      color:#11334b;
+      max-width:345px;
+    }
+    .script-card{
+      margin-top:28px;
+      font-family:'Brush Script MT','Segoe Script',cursive;
+      color:#0b4a75;
+      font-size:36px;
+      line-height:1.06;
+      max-width:360px;
+      transform:rotate(-5deg);
+      text-shadow:0 2px 0 rgba(255,255,255,.75);
+    }
+    .meet-hero-photo-wrap{
+      position:relative;
+      min-height:390px;
+      border-radius:0 0 24px 24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#dfeff5;
+    }
+    .meet-hero-photo{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center center;
+    }
+    .hero-handwritten{
+      position:absolute;
+      top:28px;
+      right:28px;
+      max-width:250px;
+      color:#0b4a75;
+      font-family:'Brush Script MT','Segoe Script',cursive;
+      font-size:37px;
+      line-height:1.04;
+      text-align:right;
+      text-shadow:0 2px 10px rgba(255,255,255,.86);
+      transform:rotate(-6deg);
+    }
+
+    /* GENERAL PAGE */
+    .story-section{padding:26px 0}
+    .story-two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .align-center{align-items:center}
+    .card-surface{
+      background:rgba(255,255,255,.96);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:32px;
+    }
+    .card-surface h2{
+      font-size:clamp(31px,3vw,44px);
+      margin-bottom:16px;
+    }
+    .card-surface p{
+      font-size:18px;
+      line-height:1.55;
+      color:#17344b;
+    }
+    .photo-frame,
+    .photo-caption-card,
+    .photo-tall{
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    .photo-frame img,
+    .photo-caption-card img,
+    .photo-tall img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+    }
+    .photo-tall{
+      min-height:330px;
+      position:relative;
+    }
+    .photo-tall img{
+      min-height:330px;
+      object-position:center center;
+    }
+    .photo-script{
+      position:absolute;
+      top:22px;
+      right:24px;
+      max-width:350px;
+      font-family:'Brush Script MT','Segoe Script',cursive;
+      font-size:34px;
+      line-height:1.06;
+      text-align:right;
+      color:#0b4a75;
+      text-shadow:0 2px 10px rgba(255,255,255,.95);
+      transform:rotate(-5deg);
+    }
+    .photo-pair-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .photo-caption-card{
+      display:flex;
+      flex-direction:column;
+      min-height:355px;
+    }
+    .photo-caption-card img{
+      height:305px;
+      object-position:center center;
+    }
+    .photo-caption-card figcaption{
+      padding:12px 14px;
+      background:var(--sand);
+      color:var(--navy);
+      font-weight:900;
+      text-align:center;
+      font-size:16px;
+      border-top:1px solid #eee1c4;
+    }
+    .full-bleed-img{
+      min-height:380px;
+    }
+    .full-bleed-img img{
+      object-position:center center;
+    }
+    .service-photo img{object-position:center center}
+    .experience-panel{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .experience-list{
+      list-style:none;
+      margin:0;
+      padding:24px;
+      background:#f4f9fb;
+      border:1px solid var(--line);
+      border-radius:18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:18px;
+      box-shadow:var(--shadow);
+    }
+    .experience-list li{
+      position:relative;
+      padding-left:28px;
+      font-size:18px;
+      font-weight:800;
+      color:var(--navy);
+      line-height:1.25;
+    }
+    .experience-list li:before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--teal);
+      font-weight:900;
+    }
+    .meet-eric-cta{
+      padding:34px 0 70px;
+      background:linear-gradient(180deg,#fff,#eef8fb);
+    }
+    .cta-panel{
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.95)),
+        url('assets/seaspray-dunes.jpg');
+      background-size:cover;
+      background-position:center bottom;
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:46px 30px;
+      text-align:center;
+    }
+    .cta-panel h2{
+      font-size:clamp(34px,4vw,50px);
+      margin-bottom:12px;
+    }
+    .cta-panel p{
+      font-size:19px;
+      line-height:1.5;
+      max-width:960px;
+      margin:0 auto;
+      color:#17344b;
+    }
+    .cta-actions{justify-content:center}
+    .closing-script{
+      margin-top:26px;
+      font-family:Georgia,serif;
+      font-size:24px;
+      font-style:italic;
+      color:var(--navy);
+      line-height:1.35;
+    }
+    .closing-script span{
+      display:block;
+      margin-top:10px;
+      font-family:'Brush Script MT','Segoe Script',cursive;
+      font-style:normal;
+      font-size:43px;
+      color:#0b4a75;
+    }
+
+    @media(max-width:1180px){
+      .meet-eric-page .brand img{width:235px}
+      .meet-eric-page .nav{gap:12px}
+      .meet-eric-page .nav a{font-size:12px}
+      .meet-eric-page .header-cta{padding:11px 18px}
+    }
+    @media(max-width:980px){
+      .meet-eric-page .site-header{min-height:74px;flex-wrap:wrap}
+      .meet-eric-page .menu-toggle{display:block}
+      .meet-eric-page .nav{display:none;flex-direction:column;width:100%;align-items:flex-start;margin:0;padding:12px 0}
+      .meet-eric-page .nav.open{display:flex}
+      .meet-eric-page .header-cta{display:none}
+      .meet-hero-grid,.story-two-col,.experience-panel{grid-template-columns:1fr}
+      .meet-hero-copy{padding-top:6px}
+      .meet-intro{max-width:none}
+      .meet-hero-photo-wrap{min-height:360px}
+      .photo-pair-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:680px){
+      .meet-eric-page .container{width:min(94vw,1180px)}
+      .meet-eric-page .brand img{width:205px}
+      .meet-hero-copy h1{font-size:60px}
+      .script-card{font-size:31px}
+      .hero-handwritten{
+        position:static;
+        max-width:none;
+        text-align:center;
+        background:rgba(255,255,255,.82);
+        padding:12px;
+        transform:none;
+      }
+      .photo-script{
+        position:static;
+        max-width:none;
+        background:rgba(255,255,255,.86);
+        padding:16px;
+        transform:none;
+        text-align:center;
+        font-size:30px;
+      }
+      .photo-pair-grid{grid-template-columns:1fr}
+      .photo-caption-card img{height:auto}
+      .card-surface{padding:24px}
+      .card-surface p{font-size:17px}
+      .hero-actions .btn{width:100%}
+      .closing-script{font-size:20px}
+      .closing-script span{font-size:36px}
+    }
+  </style>
 </head>
 <body class="meet-eric-page">
   <header class="site-header">
@@ -25,61 +439,79 @@
   </header>
 
   <main>
-    <section class="meet-hero section-tight">
+    <section class="meet-hero">
       <div class="container meet-hero-grid">
         <div class="meet-hero-copy">
-          <p class="eyebrow teal">Seaspray Owners First</p>
-          <h1>Meet Eric</h1>
+          <p class="eyebrow">Seaspray Owners First</p>
+          <h1>Meet<br>Eric</h1>
           <p class="meet-intro">I'm running for the Seaspray Board because my family cares deeply about Seaspray, its owners, and its future. This is a special place, and I want to help protect what makes it so meaningful for generations to come.</p>
           <div class="script-card">A place where families create generational memories!</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://tally.so/r/gDElo1" target="_blank" rel="noopener noreferrer">Take the Owner Survey</a>
+            <a class="btn btn-white" href="index.html#candidates">Meet the Other Candidates</a>
+          </div>
         </div>
         <div class="meet-hero-photo-wrap">
-          <img class="meet-hero-photo" src="assets/eric-hero-beach-family.png" alt="Eric's extended family at the beach" />
-          <div class="hero-handwritten">Seaspray brings family<br/>and friends together.</div>
+          <img class="meet-hero-photo" src="assets/eric-hero-beach-family.png" alt="Eric's family and friends at the beach" />
+          <div class="hero-handwritten">Seaspray brings family<br>and friends together.</div>
         </div>
       </div>
     </section>
 
-    <section class="story-section section-tight">
+    <section class="story-section">
       <div class="container story-two-col">
         <div class="story-copy card-surface">
+          <p class="eyebrow">A Connection to Seaspray</p>
           <h2>A Connection to Seaspray That Spans Generations</h2>
           <p>Like many owners our family connection to Seaspray spans generations. My wife Cindy has been visiting Seaspray with her family since she was a teenager. Those amazing trips as a family ultimately led her stepdad Leroy to purchase a one bedroom condo. It was in the rental program but primarily served as a family vacation home. Once my wife and I had kids of our own we continued the tradition and started bringing our boys to Seaspray, and last year we made the decision to sell the 1 bedroom and purchase a 2 bedroom across the courtyard.</p>
         </div>
-        <div class="story-quote-photo photo-tall">
+        <div class="photo-tall">
           <img src="assets/seaspray-dunes.jpg" alt="Sea oats and white sandy beach at Seaspray" />
-          <div class="photo-script photo-script-dark">One day our kids will grow up and bring children of their own, but all of our footprints will still be found in the same white sandy beach.</div>
+          <div class="photo-script">One day our kids will grow up and bring children of their own, but all of our footprints will still be found in the same white sandy beach.</div>
         </div>
       </div>
     </section>
 
-    <section class="story-section section-tight story-photo-text">
-      <div class="container story-two-col story-reverse-mobile">
+    <section class="story-section">
+      <div class="container story-two-col align-center">
         <div class="photo-pair-grid">
-          <figure class="photo-caption-card"><img src="assets/leroy-preston.png" alt="Leroy with one of Eric's sons at the beach" /><figcaption>Generations at the Beach</figcaption></figure>
-          <figure class="photo-caption-card"><img src="assets/leroy-sheldon.png" alt="Leroy with Eric's other son at the beach" /><figcaption>Making Memories Together</figcaption></figure>
+          <figure class="photo-caption-card">
+            <img src="assets/leroy-preston.png" alt="Leroy with one of Eric's sons at the beach" />
+            <figcaption>Generations at the Beach</figcaption>
+          </figure>
+          <figure class="photo-caption-card">
+            <img src="assets/leroy-sheldon.png" alt="Leroy with Eric's other son at the beach" />
+            <figcaption>Making Memories Together</figcaption>
+          </figure>
         </div>
         <div class="story-copy card-surface">
+          <p class="eyebrow">What Makes Seaspray Special</p>
           <h2>More Than a Beach Vacation</h2>
           <p>Our favorite memories at Seaspray obviously include time on the beach, but also gathering at the community grill area after a long day for a BBQ with friends and family as the sun sets over the beach and boardwalk. But if you ask me what truly sets Seaspray apart and what I enjoy the most, it's watching our kids meet new friends and then playing for hours together in the grass courtyard and pool, that's something you don't get at the bigger beach condos.</p>
         </div>
       </div>
     </section>
 
-    <section class="story-section section-tight">
+    <section class="story-section">
       <div class="container story-two-col align-center">
         <div class="story-copy card-surface">
+          <p class="eyebrow">Our Family's Seaspray Story</p>
           <h2>Our Family Today</h2>
           <p>We share our two bedroom condo with my in-laws Leroy and Pat, who recently purchased a home just down the road and now officially call Fort Walton their year-round home. Cindy and I live just north of San Antonio in the beautiful Texas Hill Country with our two sons and 4 dogs. Even though it is a 12 hour drive for us, Seaspray has always been a family retreat that is well worth the drive.</p>
         </div>
-        <div class="photo-frame"><img src="assets/eric-family-today.png" alt="Eric, Cindy, their boys, Leroy, Pat, and family together" /></div>
+        <div class="photo-frame full-bleed-img">
+          <img src="assets/eric-family-today.png" alt="Eric, Cindy, their boys, Leroy, Pat, and family together" />
+        </div>
       </div>
     </section>
 
-    <section class="story-section section-tight story-photo-text">
-      <div class="container story-two-col story-reverse-mobile align-center">
-        <div class="photo-frame"><img src="assets/eric-service-family.png" alt="Eric, Cindy, and their sons at a school event" /></div>
+    <section class="story-section">
+      <div class="container story-two-col align-center">
+        <div class="photo-frame full-bleed-img service-photo">
+          <img src="assets/eric-service-family.png" alt="Eric, Cindy, and their sons at a school event" />
+        </div>
         <div class="story-copy card-surface">
+          <p class="eyebrow">Service and Leadership</p>
           <h2>Service Is a Priority</h2>
           <p>Despite our busy careers paired with busy school and sports schedules, Cindy and I value giving back and volunteering. We are active in our church, HOA, PTA, and a local school advisory committee.</p>
           <p>I also go on a mission trip to Agua Prieta Mexico twice a year to help build homes for families in need.</p>
@@ -88,14 +520,17 @@
       </div>
     </section>
 
-    <section class="story-section section-tight">
+    <section class="story-section">
       <div class="container story-two-col align-center">
         <div class="story-copy card-surface">
+          <p class="eyebrow">Experience I Bring</p>
           <h2>Leadership and Professional Experience</h2>
           <p>I have spent most of my adult life as a business owner building homes which provides me with a wealth of experience in budgeting, project management, operations, vendor coordination, team and people management, and homeowner relations. I also served as a combat engineer in the Army and hold a bachelor's in business along with an MBA.</p>
         </div>
         <div class="experience-panel">
-          <div class="photo-frame"><img src="assets/eric-helicopter.png" alt="Eric and his son standing in front of a military helicopter" /></div>
+          <div class="photo-frame full-bleed-img">
+            <img src="assets/eric-helicopter.png" alt="Eric and his son standing in front of a military helicopter" />
+          </div>
           <ul class="experience-list">
             <li>Executive Leadership</li>
             <li>People and Change Management</li>
@@ -107,7 +542,7 @@
       </div>
     </section>
 
-    <section class="meet-eric-cta section-tight">
+    <section class="meet-eric-cta">
       <div class="container cta-panel">
         <h2>I Would Be Honored to Serve Seaspray Owners</h2>
         <p>I want to help protect what makes Seaspray special while making practical improvements for all owners. Together, we can build on our strong community and ensure a bright future for Seaspray.</p>
@@ -120,6 +555,7 @@
       </div>
     </section>
   </main>
+
   <script src="script-v8.js"></script>
 </body>
 </html>
