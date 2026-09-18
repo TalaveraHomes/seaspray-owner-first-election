@@ -400,6 +400,140 @@
       .photo-pair{ grid-template-columns:1fr 1fr !important; }
     }
 
+    /* v25 hero: use the full viewport width so the image reads as a true page-wide hero
+       while keeping all text physically separate from the people in the photo. */
+    .eric-hero > .container.eric-hero-inner{
+      width:100% !important;
+      max-width:none !important;
+      padding-left:clamp(28px,3.2vw,58px) !important;
+      padding-right:clamp(28px,3.2vw,58px) !important;
+      grid-template-columns:minmax(280px,330px) minmax(620px,1fr) minmax(205px,250px) !important;
+      gap:28px !important;
+    }
+    .hero-photo{
+      height:430px !important;
+      width:100% !important;
+      margin-top:0 !important;
+      border-radius:0 !important;
+      box-shadow:none !important;
+    }
+    .hero-photo img{
+      object-fit:cover !important;
+      object-position:center 48% !important;
+    }
+    .hero-script-panel{
+      align-self:stretch !important;
+      justify-content:center !important;
+      padding-top:34px !important;
+    }
+
+    .hero-election-message{
+      position:absolute !important;
+      left:22px !important;
+      right:22px !important;
+      top:18px !important;
+      z-index:5 !important;
+      padding:13px 18px 11px !important;
+      border-radius:14px !important;
+      background:rgba(6,60,99,.91) !important;
+      border:1px solid rgba(213,176,92,.95) !important;
+      box-shadow:0 10px 24px rgba(0,0,0,.16) !important;
+      text-align:center !important;
+    }
+    .hero-election-message strong{
+      display:block !important;
+      color:#fff !important;
+      font-family:Georgia,'Times New Roman',serif !important;
+      font-size:clamp(18px,1.55vw,25px) !important;
+      line-height:1.15 !important;
+      font-weight:700 !important;
+    }
+    .hero-election-tagline{
+      margin-top:7px !important;
+      color:#f0c76b !important;
+      font-family:Georgia,'Times New Roman',serif !important;
+      font-size:clamp(15px,1.2vw,19px) !important;
+      line-height:1.15 !important;
+      font-style:italic !important;
+      font-weight:700 !important;
+      letter-spacing:.01em !important;
+    }
+
+    .election-spotlight{
+      background:linear-gradient(90deg,#063c63,#07557d) !important;
+      color:#fff !important;
+      border-bottom:4px solid #d5b05c !important;
+    }
+    .election-spotlight-inner{
+      width:min(1180px,94vw) !important;
+      margin:0 auto !important;
+      display:grid !important;
+      grid-template-columns:1.05fr 1.35fr auto !important;
+      gap:28px !important;
+      align-items:center !important;
+      padding:20px 0 !important;
+    }
+    .election-spotlight h2{
+      color:#fff !important;
+      font-size:clamp(26px,2.6vw,38px) !important;
+      line-height:1.05 !important;
+      margin:0 !important;
+    }
+    .election-spotlight p{
+      margin:0 !important;
+      color:#edf8fb !important;
+      font-size:16px !important;
+      line-height:1.42 !important;
+    }
+    .election-candidates{
+      font-weight:850 !important;
+      color:#fff !important;
+    }
+    .election-spotlight .btn{
+      background:#fff !important;
+      color:#063c63 !important;
+      border-color:#fff !important;
+      box-shadow:none !important;
+      white-space:nowrap !important;
+    }
+
+    @media(max-width:1180px){
+      .eric-hero > .container.eric-hero-inner{
+        grid-template-columns:285px minmax(480px,1fr) 180px !important;
+        gap:20px !important;
+      }
+      .hero-photo{ height:400px !important; }
+      .hero-election-message{ left:14px !important; right:14px !important; top:14px !important; padding:11px 13px 10px !important; }
+      .hero-election-message strong{ font-size:18px !important; }
+      .hero-election-tagline{ font-size:15px !important; }
+      .election-spotlight-inner{ grid-template-columns:1fr 1.25fr auto !important; }
+    }
+
+    @media(max-width:980px){
+      .eric-hero > .container.eric-hero-inner{
+        width:min(94vw,1180px) !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+        grid-template-columns:1fr !important;
+      }
+      .hero-photo{ height:auto !important; }
+      .hero-photo img{ height:auto !important; }
+      .hero-election-message{
+        position:static !important;
+        margin:0 !important;
+        border-radius:0 !important;
+        padding:15px 18px 13px !important;
+      }
+      .hero-election-message strong{ font-size:19px !important; }
+      .hero-election-tagline{ font-size:16px !important; }
+      .election-spotlight-inner{
+        grid-template-columns:1fr !important;
+        gap:12px !important;
+        padding:20px 0 22px !important;
+      }
+      .election-spotlight .btn{ width:max-content !important; }
+    }
+
     @media(max-width:680px){
       .hero-photo{ height:auto !important; }
       .hero-photo img{ height:auto !important; }
@@ -443,10 +577,22 @@
         </div>
         <div class="hero-photo">
           <img src="assets/eric-hero-beach-family.png" alt="Eric and extended family together on the beach at Seaspray" />
+          <div class="hero-election-message">
+            <strong>3 Open Board Seats + 3 Owners First Candidates = One Incredible Opportunity to Create an Owners First Majority and Pursue Meaningful Improvements</strong>
+            <div class="hero-election-tagline">Owners First. Every Unit. Every Decision.</div>
+          </div>
         </div>
         <div class="hero-script-panel">
           <div class="hero-script-right">Seaspray brings family<br>and friends together.</div>
         </div>
+      </div>
+    </section>
+
+    <section class="election-spotlight" aria-label="Election information">
+      <div class="election-spotlight-inner">
+        <h2>Three Board Seats Are Up for Election</h2>
+        <p>Owners First candidates: <span class="election-candidates">Eric Stensrud, Roberto Giacomelli, and Zachary Moody</span>. Learn about all three candidates and the priorities they have outlined for Seaspray owners.</p>
+        <a class="btn" href="index.html#candidates">Meet All 3 Candidates</a>
       </div>
     </section>
 
