@@ -76,3 +76,8 @@
 .closing-script span{display:block;margin-top:10px;font-family:'Brush Script MT','Segoe Script',cursive;font-style:normal;font-size:42px;color:#184e84}
 @media(max-width:1120px){.meet-hero-grid,.story-two-col{grid-template-columns:1fr}.meet-hero-copy .meet-intro,.script-card{max-width:none}.hero-handwritten{font-size:34px;max-width:220px}.experience-panel{grid-template-columns:1fr}.photo-pair-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.meet-hero-copy h1{font-size:58px}.meet-intro,.card-surface p,.cta-panel p,.experience-list li{font-size:18px}.card-surface h2{font-size:30px}.hero-handwritten{position:static;max-width:none;text-align:center;background:rgba(255,255,255,.75);padding:12px 18px;margin:0}.photo-script{position:static;max-width:none;text-align:center;background:rgba(255,255,255,.78);padding:18px 16px;font-size:31px}.photo-pair-grid{grid-template-columns:1fr}.photo-caption-card img{height:auto}.cta-panel h2{font-size:34px}.closing-script{font-size:21px}.closing-script span{font-size:36px}}
+
+/* v27: approved home-page hero message only */
+.hero .hero-copy h2{font-size:clamp(20px,2.05vw,29px);line-height:1.12;max-width:850px;}
+.hero .hero-copy .tagline{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#0a8f96;font-weight:700;}
+@media(max-width:560px){.hero .hero-copy h2{font-size:20px;line-height:1.15}.hero .hero-copy .tagline{font-size:19px}}
