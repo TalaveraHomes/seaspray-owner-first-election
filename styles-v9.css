@@ -81,3 +81,25 @@
 .hero .hero-copy h2{font-size:clamp(20px,2.05vw,29px);line-height:1.12;max-width:850px;}
 .hero .hero-copy .tagline{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#0a8f96;font-weight:700;}
 @media(max-width:560px){.hero .hero-copy h2{font-size:20px;line-height:1.15}.hero .hero-copy .tagline{font-size:19px}}
+
+/* v28 home hero refinements */
+.hero .hero-copy h2 .hero-count{
+  color:#0a8f96;
+  font-style:italic;
+  display:inline;
+  vertical-align:baseline;
+  position:relative;
+  top:0;
+  line-height:inherit;
+}
+.hero .hero-note{
+  font-size:54px;
+  line-height:1.08;
+  max-width:430px;
+}
+@media(max-width:980px){
+  .hero .hero-note{font-size:46px;max-width:420px;}
+}
+@media(max-width:560px){
+  .hero .hero-note{font-size:38px;line-height:1.08;}
+}
