@@ -103,3 +103,40 @@
 @media(max-width:560px){
   .hero .hero-note{font-size:38px;line-height:1.08;}
 }
+
+
+/* v34 home-page refinements */
+@media(min-width:981px){
+  .matters-grid.no-stats{
+    grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr);
+    gap:42px;
+    align-items:stretch;
+  }
+  .matters-grid.no-stats .matters-copy{
+    align-self:center;
+    max-width:760px;
+  }
+  .matters-grid.no-stats .quote-card{
+    min-height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:46px 34px;
+    font-size:27px;
+  }
+}
+.slate-quote{
+  font-size:29px;
+  line-height:1.22;
+}
+.footer-script{
+  font-size:31px;
+  line-height:1.12;
+}
+
+
+/* v35 footer refinement */
+.contact-grid{grid-template-columns:320px minmax(170px,.8fr) minmax(310px,1.45fr) 230px;}
+.email-contact{min-width:310px;}
+.email-contact p,.email-contact a{white-space:nowrap;}
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr}.email-contact{min-width:0}.email-contact p,.email-contact a{white-space:normal}}
