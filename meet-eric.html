@@ -562,6 +562,110 @@
     }
   </style>
 
+
+  <style id="meet-eric-v30-hero-style-refine">
+    /* v30: match the preferred split hero style with the real photo fully visible,
+       while keeping the current text and removing hero buttons. */
+    .eric-hero{
+      background:linear-gradient(180deg,#f8fbfd 0%,#ffffff 92%) !important;
+      min-height:auto !important;
+      overflow:hidden !important;
+    }
+    .eric-hero:after{
+      bottom:-36px !important;
+      height:72px !important;
+    }
+    .eric-hero > .container.eric-hero-inner{
+      width:min(1380px,96vw) !important;
+      max-width:1380px !important;
+      margin:0 auto !important;
+      padding:14px 0 34px !important;
+      grid-template-columns:260px minmax(0,1fr) 170px !important;
+      gap:24px !important;
+      align-items:start !important;
+    }
+    .eric-hero-copy{
+      padding-top:10px !important;
+    }
+    .eric-hero h1{
+      font-size:clamp(54px,5.7vw,82px) !important;
+      line-height:.86 !important;
+      margin-bottom:12px !important;
+    }
+    .eric-hero .intro{
+      max-width:250px !important;
+      font-size:14px !important;
+      line-height:1.46 !important;
+      color:#12364e !important;
+    }
+    .hero-script-left{
+      max-width:260px !important;
+      font-size:25px !important;
+      margin-top:14px !important;
+      line-height:1.08 !important;
+    }
+    .hero-actions{display:none !important;}
+    .hero-photo{
+      height:auto !important;
+      min-height:0 !important;
+      overflow:visible !important;
+      background:transparent !important;
+      border-radius:0 !important;
+      border:0 !important;
+      box-shadow:none !important;
+      margin-top:0 !important;
+      align-self:start !important;
+    }
+    .hero-photo img{
+      width:100% !important;
+      height:auto !important;
+      display:block !important;
+      object-fit:contain !important;
+      object-position:center center !important;
+      border-radius:0 !important;
+    }
+    .hero-script-panel{
+      align-self:start !important;
+      justify-content:flex-start !important;
+      padding-top:22px !important;
+    }
+    .hero-script-right{
+      max-width:170px !important;
+      font-size:22px !important;
+      line-height:1.05 !important;
+      transform:rotate(-6deg) !important;
+      text-align:right !important;
+    }
+    @media(max-width:1180px){
+      .eric-hero > .container.eric-hero-inner{
+        width:min(1200px,96vw) !important;
+        grid-template-columns:235px minmax(0,1fr) 150px !important;
+        gap:18px !important;
+      }
+      .eric-hero .intro{max-width:230px !important; font-size:13.5px !important;}
+      .hero-script-left{font-size:23px !important; max-width:235px !important;}
+      .hero-script-right{font-size:19px !important; max-width:145px !important;}
+    }
+    @media(max-width:980px){
+      .eric-hero > .container.eric-hero-inner{
+        width:min(94vw,1180px) !important;
+        grid-template-columns:1fr !important;
+        gap:14px !important;
+        padding:18px 0 28px !important;
+      }
+      .eric-hero-copy{padding-top:0 !important;}
+      .eric-hero .intro{max-width:480px !important; font-size:15px !important;}
+      .hero-script-left{max-width:360px !important;}
+      .hero-script-panel{padding-top:0 !important;}
+      .hero-script-right{
+        max-width:320px !important;
+        font-size:28px !important;
+        text-align:left !important;
+        transform:none !important;
+      }
+    }
+  </style>
+
 </head>
 <body class="meet-eric-page">
   <header class="site-header">
@@ -588,10 +692,6 @@
           <h1>Meet<br>Eric</h1>
           <p class="intro">I'm running for the Seaspray Board because my family cares deeply about Seaspray, its owners, and its future. This is a special place, and I want to help protect what makes it so meaningful for generations to come.</p>
           <div class="hero-script-left">A place where families create generational memories!</div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://tally.so/r/gDElo1" target="_blank" rel="noopener noreferrer">Take the Owner Survey</a>
-            <a class="btn btn-white" href="index.html#candidates">Meet the Other Candidates</a>
-          </div>
         </div>
         <div class="hero-photo">
           <img src="assets/eric-hero-beach-family.png" alt="Eric and extended family together on the beach at Seaspray" />
