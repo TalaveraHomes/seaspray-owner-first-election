@@ -166,8 +166,8 @@
   </style>
 
 
-  <style id="meet-eric-v23-overrides">
-    /* v23: closer to the approved render: full-width hero band, no separate photo card */
+  <style id="meet-eric-v24-overrides">
+    /* v24: apply user-requested website updates */
     .meet-eric-page .container{
       width:min(1180px,94vw) !important;
       margin:0 auto !important;
@@ -175,25 +175,16 @@
 
     .eric-hero{
       position:relative !important;
-      min-height:360px !important;
+      min-height:auto !important;
       padding:0 !important;
       overflow:hidden !important;
-      background:
-        linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.96) 23%,rgba(255,255,255,.70) 34%,rgba(255,255,255,.12) 51%,rgba(255,255,255,0) 72%),
-        url('assets/eric-hero-beach-family.png') !important;
-      background-size:auto 360px !important;
-      background-repeat:no-repeat !important;
-      background-position:calc(50% + 120px) center !important;
+      background:linear-gradient(180deg,#f8fcfd 0%,#ffffff 86%) !important;
       border-bottom:8px solid #d8f0f2 !important;
     }
 
     .eric-hero:before{
-      content:"" !important;
-      position:absolute !important;
-      inset:0 !important;
-      z-index:1 !important;
-      pointer-events:none !important;
-      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04)) !important;
+      content:none !important;
+      display:none !important;
     }
 
     .eric-hero:after{
@@ -211,19 +202,18 @@
     .eric-hero-inner{
       position:relative !important;
       z-index:3 !important;
-      display:block !important;
-      min-height:360px !important;
-    }
-
-    .eric-hero-inner:after{
-      display:none !important;
-      content:none !important;
+      display:grid !important;
+      grid-template-columns:300px minmax(0,1fr) 215px !important;
+      gap:22px !important;
+      align-items:start !important;
+      min-height:auto !important;
+      padding:18px 0 42px !important;
     }
 
     .eric-hero-copy{
-      width:315px !important;
-      max-width:315px !important;
-      padding:28px 0 48px !important;
+      width:auto !important;
+      max-width:none !important;
+      padding:14px 0 0 !important;
       background:transparent !important;
       border-radius:0 !important;
       position:relative !important;
@@ -231,45 +221,67 @@
     }
 
     .eric-hero h1{
-      font-size:clamp(56px,5.4vw,78px) !important;
-      line-height:.88 !important;
-      margin-bottom:13px !important;
+      font-size:clamp(58px,6vw,82px) !important;
+      line-height:.86 !important;
+      margin-bottom:14px !important;
       letter-spacing:-.03em !important;
     }
 
     .eric-hero .intro{
-      max-width:305px !important;
+      max-width:275px !important;
       font-size:15px !important;
-      line-height:1.42 !important;
+      line-height:1.45 !important;
       color:#0e344e !important;
       margin-bottom:0 !important;
     }
 
     .hero-script-left{
-      max-width:310px !important;
-      font-size:28px !important;
-      line-height:1.04 !important;
-      margin-top:17px !important;
+      max-width:300px !important;
+      font-size:29px !important;
+      line-height:1.06 !important;
+      margin-top:18px !important;
       color:#0b4a75 !important;
       transform:rotate(-5deg) !important;
       text-shadow:0 2px 0 rgba(255,255,255,.75) !important;
     }
 
+    .hero-photo{
+      height:360px !important;
+      overflow:hidden !important;
+      background:#d9edf2 !important;
+      position:relative !important;
+      margin-top:4px !important;
+    }
+
+    .hero-photo img{
+      width:100% !important;
+      height:100% !important;
+      display:block !important;
+      object-fit:cover !important;
+      object-position:center center !important;
+    }
+
+    .hero-script-panel{
+      display:flex !important;
+      align-items:flex-start !important;
+      justify-content:flex-end !important;
+      padding-top:18px !important;
+    }
+
     .hero-script-right{
-      position:absolute !important;
+      position:static !important;
       z-index:4 !important;
-      right:calc(3vw + 18px) !important;
-      top:72px !important;
-      max-width:245px !important;
+      max-width:210px !important;
       text-align:right !important;
       color:#0b4a75 !important;
       font-family:'Brush Script MT','Segoe Script',cursive !important;
-      font-size:32px !important;
+      font-size:30px !important;
       line-height:1.04 !important;
       transform:rotate(-6deg) !important;
       text-shadow:0 2px 10px rgba(255,255,255,.98),0 0 2px #fff !important;
       background:transparent !important;
       padding:0 !important;
+      margin-top:0 !important;
     }
 
     .eric-hero .hero-actions{
@@ -284,10 +296,18 @@
       font-size:12px !important;
     }
 
-    /* Leroy row: match render sample — compact, horizontal, no blank bottoms */
+    /* Single heading per content box */
+    .story-copy .eyebrow{ display:none !important; }
+    .story-copy h2{
+      font-size:clamp(30px,3.2vw,44px) !important;
+      margin-bottom:14px !important;
+      color:var(--navy) !important;
+    }
+
+    /* Leroy row: compact horizontal alignment */
     .story-grid.thirds{
       display:grid !important;
-      grid-template-columns:.82fr 1.18fr !important;
+      grid-template-columns:.84fr 1.16fr !important;
       gap:28px !important;
       align-items:stretch !important;
     }
@@ -315,8 +335,8 @@
     .caption-photo img{
       display:block !important;
       width:100% !important;
-      height:275px !important;
-      flex:0 0 275px !important;
+      height:285px !important;
+      flex:0 0 285px !important;
       object-fit:cover !important;
       object-position:center center !important;
     }
@@ -345,101 +365,48 @@
       justify-content:center !important;
     }
 
-    .more-beach-copy h2{
-      font-size:clamp(32px,3vw,45px) !important;
-      margin-bottom:16px !important;
-    }
-
     .more-beach-copy p{
       font-size:17.5px !important;
       line-height:1.58 !important;
     }
 
-    .family-photo{
-      min-height:335px !important;
-    }
-
-    .family-photo img{
-      object-position:center center !important;
-    }
+    .family-photo{ min-height:335px !important; }
+    .family-photo img{ object-position:center center !important; }
 
     @media(max-width:1180px){
-      .eric-hero{
-        background-size:auto 360px !important;
-        background-position:calc(50% + 155px) center !important;
-      }
-      .hero-script-right{
-        right:3vw !important;
-        font-size:29px !important;
-      }
-      .story-grid.thirds{
-        grid-template-columns:1fr 1.12fr !important;
-      }
-      .caption-photo img{
-        height:260px !important;
-        flex-basis:260px !important;
-      }
+      .eric-hero-inner{ grid-template-columns:290px minmax(0,1fr) 190px !important; }
+      .hero-script-right{ font-size:28px !important; max-width:190px !important; }
+      .story-grid.thirds{ grid-template-columns:1fr 1.12fr !important; }
+      .caption-photo img{ height:270px !important; flex-basis:270px !important; }
     }
 
     @media(max-width:980px){
-      .eric-hero{
-        min-height:auto !important;
-        background:
-          linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.78)),
-          url('assets/eric-hero-beach-family.png') !important;
-        background-size:cover !important;
-        background-position:center center !important;
-      }
-      .eric-hero-inner{
-        min-height:500px !important;
-      }
+      .eric-hero-inner{ grid-template-columns:1fr !important; gap:18px !important; }
       .eric-hero-copy{
         width:min(430px,92vw) !important;
         max-width:min(430px,92vw) !important;
-        padding:30px 18px 46px !important;
-        background:rgba(255,255,255,.72) !important;
-        border-radius:0 0 22px 22px !important;
+        padding:28px 18px 0 !important;
       }
-      .eric-hero .intro{
-        max-width:380px !important;
-      }
+      .eric-hero .intro{ max-width:380px !important; }
+      .hero-photo{ height:390px !important; }
+      .hero-script-panel{ justify-content:flex-start !important; padding:0 18px 10px !important; }
       .hero-script-right{
-        top:auto !important;
-        bottom:62px !important;
-        right:6vw !important;
-        background:rgba(255,255,255,.70) !important;
-        border-radius:12px !important;
-        padding:8px 10px !important;
+        text-align:left !important;
+        transform:none !important;
+        max-width:360px !important;
+        font-size:32px !important;
       }
-      .story-grid.thirds{
-        grid-template-columns:1fr !important;
-      }
-      .photo-pair{
-        grid-template-columns:1fr 1fr !important;
-      }
+      .story-grid.thirds{ grid-template-columns:1fr !important; }
+      .photo-pair{ grid-template-columns:1fr 1fr !important; }
     }
 
     @media(max-width:680px){
-      .eric-hero-inner{
-        min-height:auto !important;
-      }
-      .hero-script-right{
-        position:static !important;
-        width:min(94vw,1180px) !important;
-        margin:14px auto 0 !important;
-        text-align:center !important;
-        transform:none !important;
-      }
-      .photo-pair{
-        grid-template-columns:1fr !important;
-      }
-      .caption-photo img{
-        height:auto !important;
-        flex:0 0 auto !important;
-      }
-      .caption-photo span{
-        flex:0 0 auto !important;
-      }
+      .hero-photo{ height:auto !important; }
+      .hero-photo img{ height:auto !important; }
+      .photo-pair{ grid-template-columns:1fr !important; }
+      .caption-photo img{ height:auto !important; flex:0 0 auto !important; }
+      .caption-photo span{ flex:0 0 auto !important; }
+      .hero-actions .btn,.cta-actions .btn{ width:100% !important; }
     }
   </style>
 
@@ -474,16 +441,21 @@
             <a class="btn btn-white" href="index.html#candidates">Meet the Other Candidates</a>
           </div>
         </div>
+        <div class="hero-photo">
+          <img src="assets/eric-hero-beach-family.png" alt="Eric and extended family together on the beach at Seaspray" />
+        </div>
+        <div class="hero-script-panel">
+          <div class="hero-script-right">Seaspray brings family<br>and friends together.</div>
+        </div>
       </div>
-      <div class="hero-script-right">Seaspray brings family<br>and friends together.</div>
     </section>
 
     <section class="eric-section">
       <div class="container story-grid">
         <div class="story-copy">
-          <p class="eyebrow">A Connection to Seaspray</p>
+          
           <h2>A Connection to Seaspray That Spans Generations</h2>
-          <p>Like many owners our family connection to Seaspray spans generations. My wife Cindy has been visiting Seaspray with her family since she was a teenager. Those amazing trips as a family ultimately led her stepdad Leroy to purchase a one bedroom condo. It was in the rental program but primarily served as a family vacation home. Once my wife and I had kids of our own we continued the tradition and started bringing our boys to Seaspray, and last year we made the decision to sell the 1 bedroom and purchase a 2 bedroom across the courtyard.</p>
+          <p>Like many owners our family connection to Seaspray spans generations. My wife Cindy has been visiting Seaspray with her family since she was a teenager. Those amazing trips as a family ultimately led her stepdad Leroy to purchase a one bedroom condo. Once my wife and I had kids of our own we continued the tradition and started bringing our boys to Seaspray, and last year we made the decision to sell the 1 bedroom and purchase a 2 bedroom across the courtyard.</p>
         </div>
         <div class="quote-photo">
           <img src="assets/seaspray-dunes.jpg" alt="Sea oats and white sandy beach at Seaspray" />
@@ -505,8 +477,8 @@
           </figure>
         </div>
         <div class="story-copy more-beach-copy">
-          <p class="eyebrow">What Makes Seaspray Special</p>
-          <h2>More Than a Beach Vacation</h2>
+          
+          <h2>What Makes Seaspray Special to Us</h2>
           <p>Our favorite memories at Seaspray obviously include time on the beach, but also gathering at the community grill area after a long day for a BBQ with friends and family as the sun sets over the beach and boardwalk. But if you ask me what truly sets Seaspray apart and what I enjoy the most, it's watching our kids meet new friends and then playing for hours together in the grass courtyard and pool, that's something you don't get at the bigger beach condos.</p>
         </div>
       </div>
@@ -515,8 +487,8 @@
     <section class="eric-section">
       <div class="container story-grid align-center">
         <div class="story-copy">
-          <p class="eyebrow">Our Family's Seaspray Story</p>
-          <h2>Our Family Today</h2>
+          
+          <h2>Our Family's Seaspray Story</h2>
           <p>We share our two bedroom condo with my in-laws Leroy and Pat, who recently purchased a home just down the road and now officially call Fort Walton their year-round home. Cindy and I live just north of San Antonio in the beautiful Texas Hill Country with our two sons and 4 dogs. Even though it is a 12 hour drive for us, Seaspray has always been a family retreat that is well worth the drive.</p>
         </div>
         <div class="photo-frame family-photo">
@@ -531,8 +503,8 @@
           <img src="assets/eric-service-family.png" alt="Eric, Cindy, and their sons at a school event" />
         </div>
         <div class="story-copy">
-          <p class="eyebrow">Service and Leadership</p>
-          <h2>Service Is a Priority</h2>
+          
+          <h2>Desire to Service</h2>
           <p>Despite our busy careers paired with busy school and sports schedules, Cindy and I value giving back and volunteering. We are active in our church, HOA, PTA, and a local school advisory committee.</p>
           <p>I also go on a mission trip to Agua Prieta Mexico twice a year to help build homes for families in need.</p>
           <p>I chose to run for the Seaspray Board because owners deserve stronger communication, more transparency, more accountability, and a positive path forward. I want to bring the same community-minded, servant-leadership approach to Seaspray that we try to practice in every area of our lives.</p>
@@ -543,9 +515,9 @@
     <section class="eric-section">
       <div class="container story-grid align-center">
         <div class="story-copy">
-          <p class="eyebrow">Experience I Bring</p>
+          
           <h2>Leadership and Professional Experience</h2>
-          <p>I have spent most of my adult life as a business owner building homes which provides me with a wealth of experience in budgeting, project management, operations, vendor coordination, team and people management, and homeowner relations. I also served as a combat engineer in the Army and hold a bachelor's in business along with an MBA.</p>
+          <p>I have spent most of my adult life as a business owner in the homebuilding industry, developing extensive experience in budgeting, project management, operations, vendor coordination, team leadership, and homeowner relations. My earlier service as a combat engineer in the U.S. Army helped shape my approach to leadership, accountability, teamwork, and problem-solving, while earning an MBA further strengthened the business and management skills I use every day.</p>
         </div>
         <div class="experience-wrap">
           <div class="photo-frame helicopter-photo">
