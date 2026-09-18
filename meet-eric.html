@@ -1150,9 +1150,10 @@
 
 
 
-  <style id="meet-eric-v36-homepage-hero-fix">
-    /* v36: make the Meet Eric hero follow the home page structure with a
-       single full-width banner, left copy, and the script note on the right. */
+  <style id="meet-eric-v37-homepage-hero-fix">
+    /* v37: refine the Meet Eric hero to better match the home-page feel,
+       use a cleaner wide photo treatment, improve the copy font, and keep
+       the handwritten note off of the subjects. */
     .eric-hero{
       position:relative !important;
       min-height:560px !important;
@@ -1161,7 +1162,7 @@
       overflow:hidden !important;
       padding:0 !important;
       border-bottom:1px solid var(--line) !important;
-      background:#eef4f7 url('assets/meet-eric-hero-wide-composite-v3.jpg') center center/cover no-repeat !important;
+      background:#eef4f7 !important;
     }
     .eric-hero:before,
     .eric-hero:after{
@@ -1171,37 +1172,49 @@
     .eric-hero-overlay{
       position:absolute !important;
       inset:0 !important;
-      z-index:1 !important;
+      z-index:2 !important;
       pointer-events:none !important;
       background:linear-gradient(90deg,
-        rgba(255,255,255,.95) 0%,
-        rgba(255,255,255,.92) 18%,
-        rgba(255,255,255,.80) 30%,
-        rgba(255,255,255,.18) 46%,
-        rgba(255,255,255,0) 61%,
-        rgba(255,255,255,.22) 84%,
-        rgba(255,255,255,.58) 100%) !important;
+        rgba(238,244,247,1) 0%,
+        rgba(238,244,247,.98) 12%,
+        rgba(238,244,247,.82) 21%,
+        rgba(238,244,247,.32) 31%,
+        rgba(238,244,247,0) 40%,
+        rgba(238,244,247,0) 78%,
+        rgba(238,244,247,.18) 85%,
+        rgba(238,244,247,.72) 92%,
+        rgba(238,244,247,1) 100%) !important;
     }
     .eric-hero > .container.eric-hero-inner{
       position:relative !important;
-      z-index:2 !important;
-      width:min(1400px,95vw) !important;
-      max-width:1400px !important;
+      z-index:3 !important;
+      width:min(1500px,96vw) !important;
+      max-width:1500px !important;
       min-height:560px !important;
       margin:0 auto !important;
-      padding:38px 0 !important;
+      padding:32px 0 !important;
       display:grid !important;
-      grid-template-columns:390px 1fr !important;
-      gap:32px !important;
+      grid-template-columns:360px 1fr !important;
+      gap:28px !important;
       align-items:center !important;
     }
+    .eric-hero > .container.eric-hero-inner:before{
+      content:'' !important;
+      position:absolute !important;
+      left:228px !important;
+      right:248px !important;
+      top:16px !important;
+      bottom:16px !important;
+      background:url('assets/eric-hero-beach-family-wide.png') center center/cover no-repeat !important;
+      z-index:1 !important;
+    }
     .eric-hero-copy{
-      width:390px !important;
-      max-width:390px !important;
+      width:360px !important;
+      max-width:360px !important;
       padding:0 !important;
       background:transparent !important;
       position:relative !important;
-      z-index:3 !important;
+      z-index:4 !important;
       justify-self:start !important;
     }
     .eric-hero .eyebrow{
@@ -1218,85 +1231,96 @@
       color:var(--navy) !important;
     }
     .eric-hero .intro{
-      max-width:360px !important;
-      font-size:16px !important;
-      line-height:1.5 !important;
-      color:#12364e !important;
+      max-width:340px !important;
       margin:0 !important;
+      color:#183247 !important;
+      font-family:Georgia,'Times New Roman',serif !important;
+      font-size:18px !important;
+      line-height:1.56 !important;
+      font-weight:400 !important;
+      text-wrap:pretty !important;
     }
     .hero-script-left{
-      max-width:360px !important;
-      margin-top:28px !important;
+      max-width:340px !important;
+      margin-top:24px !important;
       font-size:30px !important;
-      line-height:1.1 !important;
+      line-height:1.08 !important;
       color:#0b4a75 !important;
       transform:rotate(-6deg) !important;
-      text-shadow:0 1px 0 rgba(255,255,255,.85) !important;
+      text-shadow:0 1px 0 rgba(255,255,255,.88) !important;
+      position:relative !important;
+      z-index:4 !important;
     }
     .hero-photo,.hero-script-panel,.hero-actions{display:none !important;}
     .hero-script-right{
       position:absolute !important;
-      right:6px !important;
-      top:92px !important;
-      max-width:260px !important;
+      right:34px !important;
+      top:74px !important;
+      max-width:210px !important;
       font-family:'Brush Script MT','Segoe Script',cursive !important;
-      font-size:38px !important;
-      line-height:1.08 !important;
+      font-size:36px !important;
+      line-height:1.06 !important;
       text-align:right !important;
       color:#0b4a75 !important;
       transform:rotate(-6deg) !important;
-      text-shadow:0 2px 10px rgba(255,255,255,.95),0 0 2px #fff !important;
-      z-index:3 !important;
+      text-shadow:0 2px 12px rgba(255,255,255,.96),0 0 2px rgba(255,255,255,1) !important;
+      z-index:4 !important;
       margin:0 !important;
       background:transparent !important;
       padding:0 !important;
     }
-    @media(max-width:1280px){
-      .eric-hero{min-height:520px !important;}
+    @media(max-width:1320px){
+      .eric-hero{min-height:530px !important;}
       .eric-hero > .container.eric-hero-inner{
-        width:min(1220px,95vw) !important;
-        min-height:520px !important;
-        grid-template-columns:340px 1fr !important;
+        width:min(1320px,96vw) !important;
+        min-height:530px !important;
+        grid-template-columns:330px 1fr !important;
       }
-      .eric-hero-copy{width:340px !important;max-width:340px !important;}
-      .eric-hero .intro{max-width:320px !important;font-size:15px !important;}
-      .hero-script-left{font-size:27px !important;max-width:320px !important;}
-      .hero-script-right{font-size:31px !important;max-width:220px !important;}
+      .eric-hero > .container.eric-hero-inner:before{left:212px !important; right:220px !important;}
+      .eric-hero-copy{width:330px !important;max-width:330px !important;}
+      .eric-hero .intro{max-width:315px !important;font-size:17px !important;}
+      .hero-script-left{font-size:28px !important;max-width:315px !important;}
+      .hero-script-right{font-size:31px !important;max-width:195px !important;right:24px !important;top:76px !important;}
     }
-    @media(max-width:980px){
+    @media(max-width:1040px){
       .eric-hero{
         min-height:760px !important;
         align-items:flex-start !important;
-        background-position:center bottom !important;
       }
       .eric-hero-overlay{
-        background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.90) 34%,rgba(255,255,255,.18) 58%,rgba(255,255,255,0) 100%) !important;
+        background:linear-gradient(180deg,rgba(238,244,247,.98) 0%,rgba(238,244,247,.94) 33%,rgba(238,244,247,.32) 56%,rgba(238,244,247,0) 100%) !important;
       }
       .eric-hero > .container.eric-hero-inner{
         min-height:760px !important;
-        width:min(92vw,760px) !important;
+        width:min(92vw,860px) !important;
         grid-template-columns:1fr !important;
         align-items:start !important;
         padding-top:28px !important;
       }
+      .eric-hero > .container.eric-hero-inner:before{
+        left:0 !important;
+        right:0 !important;
+        top:180px !important;
+        bottom:20px !important;
+        background-position:center center !important;
+      }
       .eric-hero-copy{width:min(460px,92vw) !important;max-width:min(460px,92vw) !important;}
-      .eric-hero .intro{max-width:430px !important;font-size:16px !important;}
+      .eric-hero .intro{max-width:430px !important;font-size:17px !important;}
       .hero-script-left{max-width:390px !important;font-size:26px !important;}
       .hero-script-right{
         position:absolute !important;
-        top:auto !important;
-        bottom:26px !important;
-        right:18px !important;
+        top:214px !important;
+        right:16px !important;
         font-size:28px !important;
-        max-width:250px !important;
+        max-width:220px !important;
       }
     }
     @media(max-width:620px){
-      .eric-hero{min-height:700px !important;}
+      .eric-hero{min-height:710px !important;}
       .eric-hero h1{font-size:60px !important;}
-      .eric-hero .intro{font-size:15px !important;line-height:1.45 !important;}
+      .eric-hero .intro{font-size:16px !important;line-height:1.5 !important;}
       .hero-script-left{font-size:24px !important;}
-      .hero-script-right{font-size:24px !important;max-width:220px !important;}
+      .hero-script-right{font-size:24px !important;max-width:190px !important;right:10px !important;}
     }
   </style>
 
