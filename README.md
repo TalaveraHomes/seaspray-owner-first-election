@@ -31,3 +31,7 @@ Update notes v9:
 V10 update: top header Survey and Take Survey buttons, hero Take the Survey, and Share Your Concerns now link directly to https://tally.so/r/gDElo1.
 
 V11 update: every survey-related navigation item and button, including Survey, Take Survey, Take the Survey, Take the Owner Survey, and Share Your Concerns, opens the Tally survey directly in a new browser tab.
+
+
+## Google Analytics
+Google Analytics 4 tracking added to all HTML pages using measurement ID `G-ZNEZER2F2J`.
