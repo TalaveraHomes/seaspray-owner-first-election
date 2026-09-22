@@ -15,3 +15,8 @@ This version adds the Board VP update section requested on September 21, 2026.
 ## Upload to GitHub
 
 Replace/upload the entire contents of this ZIP at the repository root, including the full `assets` folder.
+
+
+## Florida Condo Law page
+- `florida-condo-law.html` — 2026 owner guide with direct links to Florida statutes.
+- `assets/florida-condo-law-owner-guide.pdf` — downloadable two-page PDF version.
