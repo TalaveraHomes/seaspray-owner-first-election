@@ -20,3 +20,13 @@ Replace/upload the entire contents of this ZIP at the repository root, including
 ## Florida Condo Law page
 - `florida-condo-law.html` — 2026 owner guide with direct links to Florida statutes.
 - `assets/florida-condo-law-owner-guide.pdf` — downloadable two-page PDF version.
+
+
+## Florida Condo Law owner guide
+- Online page: `florida-condo-law.html`
+- Printable PDF: `Florida-Condo-Law-Seaspray-Owner-Guide.pdf`
+- The same PDF is also stored at `assets/florida-condo-law-owner-guide.pdf`.
+
+
+## v58 Board Update copy
+Updated the Fresh Leadership and candidate qualifications sections with the latest owner-first collaboration, accountability, transparency, Florida condominium statute, leadership, budgeting, and rental-program language.
