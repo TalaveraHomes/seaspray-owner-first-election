@@ -1,37 +1,17 @@
-# Seaspray Owners First Election Website (v8)
+# Seaspray Owners First Election Website (v50)
 
-This package makes the latest visual polish changes.
+This version adds the Board VP update section requested on September 21, 2026.
 
-## Changes in this version
-- The aerial Seaspray photo now fills the entire white photo card.
-- The professional “What Seaspray Owners Deserve” graphic has been cropped tighter.
-- Removed the large outer box around the “What Seaspray Owners Deserve” graphic.
-- Added cache-busting with `styles-v8.css` and `script-v8.js`.
+## New in this version
 
-## Files to upload/replace in GitHub
-Upload:
-- `index.html`
-- `styles-v8.css`
-- `script-v8.js`
-- `README.md`
-- the full `assets` folder
+- Replaced the hero message “Same Beautiful Place. A Brighter Future.” with a clickable callout: **Regarding “UPDATE on Seaspray by Board VP”**.
+- Added **Board Update** as a primary navigation item.
+- Added a Board Update preview section to the main scrolling homepage.
+- Added `board-update.html` with the approved Owners First perspective.
+- Added `joe-board-email.html` containing the original Board VP email screenshot.
+- Preserved Google Analytics measurement ID `G-ZNEZER2F2J` on all pages.
+- Preserved the Meet Eric and Roberto profile pages and all existing website assets.
 
-## Still to customize
-- Owner survey links are already connected to https://tally.so/r/gDElo1 and open in a new tab
-- Replace `YOUR_TOWNHALL_REGISTRATION_LINK_HERE`
-- Update the town hall date/time once finalized
+## Upload to GitHub
 
-
-Update notes v9:
-- Connected the Owner Survey button to https://tally.so/r/gDElo1
-- Added an embedded Tally owner survey directly on the Survey section of the homepage
-- Added Tally embed script before the site script
-
-
-V10 update: top header Survey and Take Survey buttons, hero Take the Survey, and Share Your Concerns now link directly to https://tally.so/r/gDElo1.
-
-V11 update: every survey-related navigation item and button, including Survey, Take Survey, Take the Survey, Take the Owner Survey, and Share Your Concerns, opens the Tally survey directly in a new browser tab.
-
-
-## Google Analytics
-Google Analytics 4 tracking added to all HTML pages using measurement ID `G-ZNEZER2F2J`.
+Replace/upload the entire contents of this ZIP at the repository root, including the full `assets` folder.
