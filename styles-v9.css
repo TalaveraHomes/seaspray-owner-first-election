@@ -167,23 +167,26 @@
 .update-hero{background:linear-gradient(180deg,#f9fcfd,#fff);padding:52px 0 24px}
 .update-hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(360px,.84fr);gap:34px;align-items:stretch}
 .update-hero-copy{padding:18px 0 8px}
-.update-hero-copy h1{font-size:clamp(48px,5.8vw,76px);line-height:.97;max-width:780px}
+.update-hero-copy h1{font-size:clamp(44px,5.2vw,68px);line-height:1.01;max-width:780px;letter-spacing:-.025em}
 .gold-rule{width:76px;height:4px;background:#dfa813;border-radius:999px;margin:18px 0 22px}
-.update-hero-copy>p:not(.eyebrow){font-size:17.5px;line-height:1.55;color:#28445b;max-width:790px}
+.update-hero-copy>p:not(.eyebrow){font-family:'Aptos','Avenir Next','Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.67;color:#304b60;max-width:790px}
 .update-hero-visual{position:relative;min-height:470px;border-radius:24px;overflow:hidden;background:#eaf7fa}
 .update-hero-photo{position:absolute;inset:0;background:url('assets/hero-main.jpg') center/cover no-repeat}
 .update-hero-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.60) 0%,rgba(255,255,255,.06) 42%,rgba(255,255,255,.02) 100%)}
 .full-email-button{position:absolute;z-index:3;right:24px;top:24px;background:rgba(255,255,255,.93);color:var(--navy);text-decoration:none;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;padding:15px 20px;border-radius:12px;box-shadow:0 10px 26px rgba(5,45,73,.16);border:1px solid rgba(6,60,99,.10)}
 .full-email-button span{font-family:Arial,sans-serif;margin-left:12px}
 .update-hero-mantra{position:absolute;z-index:3;right:26px;top:100px;text-align:center;letter-spacing:.28em;line-height:1.7;font-size:12px;font-weight:850;color:var(--navy);text-shadow:0 1px 6px rgba(255,255,255,.95)}
-.update-cards-section{padding:18px 0 34px;background:#fff}
-.update-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-.update-card{border:1px solid #d3e6ef;border-radius:18px;background:#fff;box-shadow:0 12px 34px rgba(6,60,99,.08);padding:26px 25px 24px;display:flex;flex-direction:column;min-height:100%}
-.update-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#f2f1df;color:#078e95;margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(7,142,149,.08)}
-.update-icon-svg{width:31px;height:31px;display:block}
-.update-card h2{font-size:clamp(28px,2.35vw,39px);line-height:1.02;margin-bottom:15px}
-.update-card p{font-size:16.5px;line-height:1.47;color:#355066;margin:0 0 14px}
-.update-card blockquote{margin:auto 0 0;padding:20px 22px;border:0;border-radius:13px;background:linear-gradient(135deg,#e8f8fb,#f5fbfc);font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;font-style:italic;line-height:1.22;color:#0b4a75;text-align:center}
+.update-cards-section{padding:24px 0 42px;background:linear-gradient(180deg,#ffffff 0%,#f8fbfc 100%)}
+.update-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.update-card{position:relative;border:1px solid rgba(6,60,99,.11);border-radius:16px;background:rgba(255,255,255,.98);box-shadow:0 18px 42px rgba(6,60,99,.07);padding:30px 30px 28px;display:flex;flex-direction:column;min-height:100%;overflow:hidden}
+.update-card:before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#0a8f96 0%,#d5b05c 100%)}
+.update-kicker{margin:0 0 13px!important;font-family:'Avenir Next','Segoe UI',Arial,sans-serif!important;font-size:12px!important;line-height:1.2!important;font-weight:800!important;letter-spacing:.13em;text-transform:uppercase;color:#0a8f96!important}
+.update-card h2{font-family:'Avenir Next','Segoe UI',Arial,sans-serif;font-size:clamp(25px,2vw,32px);font-weight:800;letter-spacing:-.025em;line-height:1.08;margin:0 0 18px;color:#063c63}
+.update-card p{font-family:'Aptos','Avenir Next','Segoe UI',Arial,sans-serif;font-size:16.5px;line-height:1.62;color:#365166;margin:0 0 17px}
+.update-card strong{color:#173f5d;font-weight:800}
+.update-card blockquote{margin:auto 0 0;padding:18px 0 0;border:0;border-top:1px solid #dbe8ef;background:transparent;border-radius:0;font-family:'Avenir Next','Segoe UI',Arial,sans-serif;font-size:17px;font-weight:750;font-style:normal;line-height:1.42;color:#0b4a75;text-align:left}
+.update-card blockquote:before{content:'→';display:inline-block;margin-right:9px;color:#d5a21b;font-weight:900}
+
 .law-note{font-size:13px!important;margin-top:-2px!important}
 .law-note a{color:#087d88;font-weight:750;text-decoration:none}
 .better-quote-section{padding:0 0 34px}
@@ -220,7 +223,7 @@
   .board-update-preview-grid{gap:24px}.board-update-preview-copy p{font-size:16px}
   .update-hero{padding-top:28px}.update-hero-copy h1{font-size:43px}.update-hero-copy>p:not(.eyebrow){font-size:16px}
   .update-hero-visual{min-height:300px}.full-email-button{right:14px;top:14px;font-size:17px;padding:12px 14px}.update-hero-mantra{display:none}
-  .update-cards{grid-template-columns:1fr}.update-card:last-child{grid-column:auto}.update-card{padding:23px 21px}.update-card h2{font-size:30px}.update-card p{font-size:16px}
+  .update-cards{grid-template-columns:1fr}.update-card:last-child{grid-column:auto}.update-card{padding:26px 23px}.update-card h2{font-size:27px}.update-card p{font-size:16px;line-height:1.58}
   .better-quote-panel{padding:26px 20px}.better-quote{font-size:27px!important}
   .joe-email-main{padding-top:28px}.joe-email-heading>p:not(.eyebrow){font-size:16px}.joe-email-image-card{padding:7px;border-radius:12px}
 }
