@@ -1,32 +1,14 @@
-# Seaspray Owners First Election Website (v50)
+# Seaspray Owners First Website – GitHub Upload Ready
 
-This version adds the Board VP update section requested on September 21, 2026.
+This package is a slimmed version of v59 containing only files actually used by the live website.
 
-## New in this version
+## IMPORTANT
+Do NOT upload the ZIP file itself to GitHub Pages.
 
-- Replaced the hero message “Same Beautiful Place. A Brighter Future.” with a clickable callout: **Regarding “UPDATE on Seaspray by Board VP”**.
-- Added **Board Update** as a primary navigation item.
-- Added a Board Update preview section to the main scrolling homepage.
-- Added `board-update.html` with the approved Owners First perspective.
-- Added `joe-board-email.html` containing the original Board VP email screenshot.
-- Preserved Google Analytics measurement ID `G-ZNEZER2F2J` on all pages.
-- Preserved the Meet Eric and Roberto profile pages and all existing website assets.
+1. Extract the ZIP on your computer.
+2. Open the extracted folder.
+3. Upload the contents to the root of the GitHub repository, keeping the `assets` folder intact.
+4. Commit the changes.
+5. Wait for GitHub Pages to deploy, then hard-refresh the site (Ctrl+F5 on Windows).
 
-## Upload to GitHub
-
-Replace/upload the entire contents of this ZIP at the repository root, including the full `assets` folder.
-
-
-## Florida Condo Law page
-- `florida-condo-law.html` — 2026 owner guide with direct links to Florida statutes.
-- `assets/florida-condo-law-owner-guide.pdf` — downloadable two-page PDF version.
-
-
-## Florida Condo Law owner guide
-- Online page: `florida-condo-law.html`
-- Printable PDF: `Florida-Condo-Law-Seaspray-Owner-Guide.pdf`
-- The same PDF is also stored at `assets/florida-condo-law-owner-guide.pdf`.
-
-
-## v58 Board Update copy
-Updated the Fresh Leadership and candidate qualifications sections with the latest owner-first collaboration, accountability, transparency, Florida condominium statute, leadership, budgeting, and rental-program language.
+The large unused video and duplicate PDF/preview assets were removed to keep the upload small.
