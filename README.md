@@ -12,3 +12,10 @@ Do NOT upload the ZIP file itself to GitHub Pages.
 5. Wait for GitHub Pages to deploy, then hard-refresh the site (Ctrl+F5 on Windows).
 
 The large unused video and duplicate PDF/preview assets were removed to keep the upload small.
+
+
+## v60 update
+- Added Zachary Moody candidate profile page (`zachary-profile.html`).
+- Added Zachary candidate profile image (`assets/zachary-candidate-profile.png`).
+- Updated homepage candidate card to link to Zachary profile.
+- Bumped cache version to v60.
