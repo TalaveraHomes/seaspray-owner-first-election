@@ -25,3 +25,24 @@ The large unused video and duplicate PDF/preview assets were removed to keep the
 - Added Central and Eastern meeting times and no-registration language.
 - Added direct Zoom links in the announcement banner, header, hero, and town hall card.
 - Bumped the stylesheet cache version to v61.
+
+## v62 update
+- Added a professional Owners First response to David Burwell's September 22 election email.
+- Added a source-materials page containing the original email image and candidacy statement.
+- Updated the homepage election-update callout and response links.
+- Added a plain-language reminder distinguishing proxies from Board-election ballots.
+- Bumped the stylesheet and script cache versions to v62.
+
+## v63 update
+- Rebuilt the election response around the meaning of Owners First rather than a point-by-point rebuttal.
+- Expanded the year-round communication, owner participation, transparency, responsible AI, shared knowledge, guest service, and confidentiality sections.
+- Added direct links to the relevant official Florida statutes and carefully qualified the general director term-limit language.
+- Updated the homepage callout and cache versions to v63.
+
+## v64 update
+- Expanded the transparency section to distinguish legal compliance from the higher Owners First standard.
+- Reframed the AI language to explain responsible use without sounding defensive.
+- Reworked the Board-experience section around shared knowledge, staggered terms, continuity, renewal, and accountability.
+- Added the personal experiences that led Eric, Roberto, and Zachary to form the Owners First candidate group.
+- Strengthened the confidentiality section to emphasize both protection and appropriate owner communication.
+- Bumped the response-page, homepage, and source-material cache versions to v64.
