@@ -19,3 +19,9 @@ The large unused video and duplicate PDF/preview assets were removed to keep the
 - Added Zachary candidate profile image (`assets/zachary-candidate-profile.png`).
 - Updated homepage candidate card to link to Zachary profile.
 - Bumped cache version to v60.
+
+## v61 update
+- Added the confirmed Owners First online town hall announcement for Tuesday, September 29, 2026.
+- Added Central and Eastern meeting times and no-registration language.
+- Added direct Zoom links in the announcement banner, header, hero, and town hall card.
+- Bumped the stylesheet cache version to v61.
