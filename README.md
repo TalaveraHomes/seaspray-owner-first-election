@@ -46,3 +46,26 @@ The large unused video and duplicate PDF/preview assets were removed to keep the
 - Added the personal experiences that led Eric, Roberto, and Zachary to form the Owners First candidate group.
 - Strengthened the confidentiality section to emphasize both protection and appropriate owner communication.
 - Bumped the response-page, homepage, and source-material cache versions to v64.
+
+## v65 update
+- Identified David Burwell as the current Board President and linked the opening directly to his original election materials.
+- Removed the personality and back-and-forth language from the introduction.
+- Clarified that Owners First is not seeking a takeover or a negative transformation of Seaspray.
+- Added context about recent challenges and why difficult times require stronger transparency, communication, and respect for owners.
+- Broadened the AI discussion and simplified the Board-experience and term-limit language.
+- Bumped the response-page, homepage, and source-material cache versions to v65.
+
+## v66 update
+- Replaced the single homepage election-update callout with two equally visible choices.
+- Added a direct path to David Burwell's email, candidate statement, and the latest Owners First response.
+- Added a direct path to the Board Vice President's update, full original email, and the Owners First perspective.
+- Updated the homepage election-updates section to present both communications clearly.
+- Bumped the homepage and David-response cache versions to v66.
+
+## v67 update
+
+- Replaced the question-style homepage update headings with direct communication titles.
+- Identified David Burwell's item as a message from the current Board President about the Seaspray election.
+- Restored the original Vice President heading, “UPDATE on Seaspray by Board VP.”
+- Adjusted the update-card typography and height for the longer titles.
+- Bumped the relevant cache versions to v67.

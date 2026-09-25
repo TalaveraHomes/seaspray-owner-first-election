@@ -170,6 +170,7 @@
 .update-hero-copy h1{font-size:clamp(44px,5.2vw,68px);line-height:1.01;max-width:780px;letter-spacing:-.025em}
 .gold-rule{width:76px;height:4px;background:#dfa813;border-radius:999px;margin:18px 0 22px}
 .update-hero-copy>p:not(.eyebrow){font-family:'Aptos','Avenir Next','Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.67;color:#304b60;max-width:790px}
+.update-hero-copy>p a{color:#087f87;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .update-hero-visual{position:relative;min-height:470px;border-radius:24px;overflow:hidden;background:#eaf7fa}
 .update-hero-photo{position:absolute;inset:0;background:url('assets/hero-main.jpg') center/cover no-repeat}
 .update-hero-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.60) 0%,rgba(255,255,255,.06) 42%,rgba(255,255,255,.02) 100%)}
@@ -349,3 +350,22 @@
 .statute-links span{padding:0 5px;color:#d5a21b}
 @media(max-width:980px){.response-principle-inner{grid-template-columns:1fr;gap:8px}.update-card-wide{grid-template-columns:1fr}.update-card-wide .wide-card-copy{columns:1}.update-card-wide blockquote{grid-column:auto}}
 @media(max-width:560px){.response-principle-inner{text-align:center;padding-top:24px;padding-bottom:24px}.response-principle-inner strong{font-size:23px}.response-principle-inner span{font-size:16px}}
+
+/* v66 - dual election update choices in the homepage hero */
+.hero-update-stack{justify-self:end;align-self:center;width:min(470px,37vw);display:grid;gap:15px;margin-bottom:82px}
+.hero-update-card{position:relative;display:block;padding:22px 64px 21px 25px;border-radius:18px;background:rgba(247,253,255,.94);border:1px solid rgba(255,255,255,.96);box-shadow:0 14px 34px rgba(5,45,73,.20);backdrop-filter:blur(9px);text-decoration:none;color:var(--navy);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.hero-update-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(5,45,73,.25);border-color:rgba(10,143,150,.42)}
+.hero-update-card strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,2vw,30px);line-height:1.05;color:var(--navy);margin-bottom:8px}
+.hero-update-summary{display:block;font-size:14px;line-height:1.42;font-weight:650;color:#35566c;max-width:340px}
+.hero-update-card .hero-update-arrow{right:22px;font-size:31px}
+.hero-update-card-vp{background:rgba(239,250,250,.95);border-color:rgba(10,143,150,.24)}
+.hero-update-card-vp .hero-update-kicker{color:#087a82}
+@media(max-width:1080px){.hero-update-stack{width:min(430px,39vw);margin-bottom:45px}}
+@media(max-width:980px){.hero-update-stack{justify-self:start;width:100%;grid-template-columns:1fr 1fr;margin:18px 0 0}.hero-update-card{min-height:175px}.hero-update-summary{max-width:none}}
+@media(max-width:700px){.hero-update-stack{grid-template-columns:1fr}.hero-update-card{min-height:0;padding:21px 58px 20px 22px}.hero-update-card strong{font-size:24px}.hero-update-summary{font-size:13.5px}}
+
+/* v67 - straightforward titles for the two election communications */
+.hero-update-card{min-height:170px}
+.hero-update-card-david strong{font-size:clamp(20px,1.65vw,25px);line-height:1.07}
+.hero-update-card-vp strong{font-size:clamp(21px,1.8vw,28px)}
+@media(max-width:700px){.hero-update-card{min-height:0}.hero-update-card-david strong,.hero-update-card-vp strong{font-size:23px}}
