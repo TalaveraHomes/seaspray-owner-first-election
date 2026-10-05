@@ -1,4 +1,4 @@
-# Seaspray Owners First: v69
+# Seaspray Owners First: v73
 
 Upload-ready update. This package has not been published to GitHub Pages.
 
@@ -8,6 +8,10 @@ Upload-ready update. This package has not been published to GitHub Pages.
 4. Refresh the website.
 
 Changes:
+- Separate editable fields for owner referrals as a percentage of total gross rental revenue (5%) and retained referral commission rate (18%).
+- Live results explicitly show owner-referral rentals at the retained referral rate and all remaining rentals at the standard rate.
+- Owner-referral scenario starts at 5%, with automatic updates and a new script URL to avoid older cached code.
+- Calculator now shows implied 1.4% owner-referral share, commissions collected, separate referral payments, and commissions retained.
 - Committee heading and description updated to emphasize restaffing and actively utilizing committees.
 - New town hall: Wednesday, October 7, 2026, 6–9 p.m. Central / 7–10 p.m. Eastern.
 - Zoom: https://us06web.zoom.us/j/86055921441
