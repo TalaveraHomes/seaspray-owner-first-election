@@ -1,4 +1,4 @@
-# Seaspray Owners First: v75
+# Seaspray Owners First: v76
 
 Upload-ready update. This package has not been published to GitHub Pages.
 
@@ -8,6 +8,7 @@ Upload-ready update. This package has not been published to GitHub Pages.
 4. Refresh the website.
 
 Changes:
+- Calculator now shows the amount above or below an illustrative budget projection and its equivalent per rental unit, assuming 90 units.
 - Dollar inputs display thousands separators; percentage inputs display a percent sign inside each box. Formatted dollar entries remain editable and recalculate.
 - Calculator is now expandable, clearly illustrative, and compares against a matching hypothetical starting example. Budget and referral-inference references removed from the calculator.
 - Separate editable fields for owner referrals as a percentage of total gross rental revenue (5%) and retained referral commission rate (18%).
