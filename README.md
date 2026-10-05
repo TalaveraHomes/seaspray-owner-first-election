@@ -1,4 +1,4 @@
-# Seaspray Owners First: v68
+# Seaspray Owners First: v69
 
 Upload-ready update. This package has not been published to GitHub Pages.
 
@@ -8,6 +8,7 @@ Upload-ready update. This package has not been published to GitHub Pages.
 4. Refresh the website.
 
 Changes:
+- Committee heading and description updated to emphasize restaffing and actively utilizing committees.
 - New town hall: Wednesday, October 7, 2026, 6–9 p.m. Central / 7–10 p.m. Eastern.
 - Zoom: https://us06web.zoom.us/j/86055921441
 - Election procedures pages 3–5 under How to Vote, reproduced unchanged, plus printable PDF.
