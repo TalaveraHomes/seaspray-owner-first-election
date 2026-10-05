@@ -6,7 +6,7 @@ const fields={gross:get('calc-gross'),rate:get('calc-rate'),commission:get('calc
 const share=get('calc-share'),referral=get('calc-referral'),result=get('calc-results'),cell=get('calc-commission-cell');
 const money=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
 const pct=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
-const baseline=696500;
+const baseline=687500;
 function calculate({gross,rate,commission,share,referral,solve}){
  const s=share/100,f=referral/100;
  let effective=(1-s)*rate/100+s*f;
@@ -36,9 +36,9 @@ function render(){
  fields[solve.value].value=String(Number(r[solve.value].toFixed(solve.value==='rate'?6:2)));
  const delta=r.commission-baseline,level=Math.abs(delta)<.005?'equal':delta>0?'above':'below';
  cell.classList.toggle('above-budget',level==='above');cell.classList.toggle('below-budget',level==='below');
- const status=level==='equal'?'Matches the $696,500 retained-commission budget':money.format(Math.abs(delta))+' '+level+' the retained-commission budget';
+ const status=level==='equal'?'Matches the $687,500 illustrative starting example':money.format(Math.abs(delta))+' '+level+' the illustrative starting example';
  const growth=(r.gross/2500000-1)*100;
- const detail='Gross rental income is '+money.format(r.gross)+', '+(Math.abs(growth)<.00001?'the same as budget':pct.format(Math.abs(growth))+'% '+(growth>0?'above':'below')+' budget')+'.';
+ const detail='Gross rental income is '+money.format(r.gross)+', '+(Math.abs(growth)<.00001?'the same as the starting example':pct.format(Math.abs(growth))+'% '+(growth>0?'above':'below')+' the starting example')+'.';
  result.innerHTML='<strong class="calc-status '+level+'">'+status+'</strong><p>'+detail+'</p><ul><li><strong>Owner referrals:</strong> '+pct.format(Number(share.value))+'% of total gross rent ('+money.format(r.referralRent)+') × '+pct.format(Number(referral.value))+'% retained commission = '+money.format(r.referralIncome)+'.</li><li><strong>Seaspray-generated bookings:</strong> '+pct.format(100-Number(share.value))+'% of total gross rent ('+money.format(r.otherRent)+') × '+pct.format(r.rate)+'% retained commission = '+money.format(r.otherIncome)+'.</li></ul><p>The combined retained commission rate is '+pct.format(r.effective*100)+'%.</p>';
 }
 Object.values(fields).concat([share,referral]).forEach(i=>{i.addEventListener('input',render);i.addEventListener('change',render);});solve.addEventListener('change',render);
