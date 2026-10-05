@@ -7,6 +7,19 @@ const share=get('calc-share'),referral=get('calc-referral'),result=get('calc-res
 const money=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
 const pct=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
 const baseline=687500;
+const dollars=new Intl.NumberFormat('en-US',{maximumFractionDigits:2});
+const isDollar=input=>input===fields.gross||input===fields.commission;
+function readNumber(input){
+ const raw=input.value.trim();
+ if(raw==='')return NaN;
+ if(isDollar(input)){
+  const text=raw.replace(/\s/g,'');
+  if(!/^\$?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d*)?$/.test(text))return NaN;
+  const value=Number(text.replace(/[$,]/g,''));return value<=1e9?value:NaN;
+ }
+ const value=Number(raw);return input.validity.valid&&Number.isFinite(value)&&value>=0&&value<=100?value:NaN;
+}
+function formatDollars(input){const value=readNumber(input);if(Number.isFinite(value))input.value=dollars.format(value);}
 function calculate({gross,rate,commission,share,referral,solve}){
  const s=share/100,f=referral/100;
  let effective=(1-s)*rate/100+s*f;
@@ -30,10 +43,10 @@ function fail(message){cell.classList.remove('above-budget','below-budget');fiel
 function render(){
  Object.entries(fields).forEach(([name,input])=>{input.readOnly=name===solve.value;input.setAttribute('aria-readonly',String(input.readOnly));get('calc-'+name+'-note').textContent=input.readOnly?'Calculated':'';get('calc-'+name+'-row').classList.toggle('calculated-row',input.readOnly);});
  const active=Object.entries(fields).filter(([name])=>name!==solve.value).map(([,input])=>input).concat([share,referral]);
- if(active.some(i=>i.value.trim()===''||!i.validity.valid||!Number.isFinite(i.valueAsNumber))){fail('Enter valid amounts in every editable cell. Dollars must be $0–$1 billion and percentages 0%–100%.');return;}
- const r=calculate({gross:Number(fields.gross.value),rate:Number(fields.rate.value),commission:Number(fields.commission.value),share:Number(share.value),referral:Number(referral.value),solve:solve.value});
+ if(active.some(i=>!Number.isFinite(readNumber(i)))){fail('Enter valid amounts in every editable cell. Dollars may include commas and must be $0–$1 billion. Percentages must be 0%–100%.');return;}
+ const r=calculate({gross:readNumber(fields.gross),rate:readNumber(fields.rate),commission:readNumber(fields.commission),share:readNumber(share),referral:readNumber(referral),solve:solve.value});
  if(r.error){fail(r.error);return;}
- fields[solve.value].value=String(Number(r[solve.value].toFixed(solve.value==='rate'?6:2)));
+ fields[solve.value].value=solve.value==='rate'?String(Number(r.rate.toFixed(6))):dollars.format(r[solve.value]);
  const delta=r.commission-baseline,level=Math.abs(delta)<.005?'equal':delta>0?'above':'below';
  cell.classList.toggle('above-budget',level==='above');cell.classList.toggle('below-budget',level==='below');
  const status=level==='equal'?'Matches the $687,500 illustrative starting example':money.format(Math.abs(delta))+' '+level+' the illustrative starting example';
@@ -42,6 +55,9 @@ function render(){
  result.innerHTML='<strong class="calc-status '+level+'">'+status+'</strong><p>'+detail+'</p><ul><li><strong>Owner referrals:</strong> '+pct.format(Number(share.value))+'% of total gross rent ('+money.format(r.referralRent)+') × '+pct.format(Number(referral.value))+'% retained commission = '+money.format(r.referralIncome)+'.</li><li><strong>Seaspray-generated bookings:</strong> '+pct.format(100-Number(share.value))+'% of total gross rent ('+money.format(r.otherRent)+') × '+pct.format(r.rate)+'% retained commission = '+money.format(r.otherIncome)+'.</li></ul><p>The combined retained commission rate is '+pct.format(r.effective*100)+'%.</p>';
 }
 Object.values(fields).concat([share,referral]).forEach(i=>{i.addEventListener('input',render);i.addEventListener('change',render);});solve.addEventListener('change',render);
+ [fields.gross,fields.commission].forEach(input=>input.addEventListener('blur',()=>{formatDollars(input);render();}));
 get('calc-reset').addEventListener('click',()=>{solve.value='commission';fields.gross.value='2500000';fields.rate.value='28';fields.commission.value='687500';share.value='5';referral.value='18';render();});
+ get('calc-reset').addEventListener('click',()=>{formatDollars(fields.gross);formatDollars(fields.commission);});
+ formatDollars(fields.gross);formatDollars(fields.commission);
 render();
 })();

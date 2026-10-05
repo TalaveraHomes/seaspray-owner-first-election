@@ -1,4 +1,4 @@
-# Seaspray Owners First: v74
+# Seaspray Owners First: v75
 
 Upload-ready update. This package has not been published to GitHub Pages.
 
@@ -8,6 +8,7 @@ Upload-ready update. This package has not been published to GitHub Pages.
 4. Refresh the website.
 
 Changes:
+- Dollar inputs display thousands separators; percentage inputs display a percent sign inside each box. Formatted dollar entries remain editable and recalculate.
 - Calculator is now expandable, clearly illustrative, and compares against a matching hypothetical starting example. Budget and referral-inference references removed from the calculator.
 - Separate editable fields for owner referrals as a percentage of total gross rental revenue (5%) and retained referral commission rate (18%).
 - Live results explicitly show owner-referral rentals at the retained referral rate and all remaining rentals at the standard rate.
