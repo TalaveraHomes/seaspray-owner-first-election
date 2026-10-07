@@ -5,10 +5,24 @@ const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov',
 const calendar=[31,28,31,30,31,30,31,31,30];
 const nights=[13,14,18,15,18,23,24,24,20],gross=[1600,1800,2850,2300,3450,5500,6100,5600,3800],bookings=[2,2,3,3,4,5,5,5,4],fees=[185,185,277,277,370,462,462,462,370],ownerUse=[5,4,2,2,2,0,0,1,2],closed=[0,0,2,0,0,0,0,1,2];
 const channelPattern=['website','website','website','phone','phone','vrbo','vrbo','airbnb','booking','person'];
+const outlierBoost=(u,m,bedrooms,side)=>{
+ let adjust=0;
+ // Your sample unit: usually a little behind its close peers.
+ if(u===0)adjust+=[-.05,-.04,-.03,-.04,-.03,-.02,-.03,-.04,-.05][m]??0;
+ // A pair of standout 2BR north units that noticeably outperform in peak season.
+ if((u===4||u===5)&&bedrooms===2&&side==='north')adjust+=[.02,.03,.04,.05,.07,.10,.11,.10,.08][m]??0;
+ // One unit that consistently struggles and falls behind in summer.
+ if(u===14)adjust+=[-.03,-.02,-.01,-.02,-.03,-.08,-.12,-.10,-.07][m]??0;
+ // South-side 1BR group runs a little stronger than the rest during shoulder and peak months.
+ if(bedrooms===1&&side==='south')adjust+=[0,.01,.01,0,.02,.04,.05,.04,.03][m]??0;
+ // One exceptional 1BR South unit that meaningfully overperforms year to date.
+ if(u===36)adjust+=[.03,.04,.05,.05,.06,.08,.09,.08,.06][m]??0;
+ return adjust;
+};
 const units=Array.from({length:48},(_,u)=>{
  const bedrooms=u<24?2:1,side=u%24<12?'north':'south';
  const records=calendar.map((days,m)=>{
-  const factor=u===0?1:1.03+((u%7)-3)*.035+Math.sin((u+m)*.8)*.05;
+  const baseFactor=u===0?1:1.03+((u%7)-3)*.035+Math.sin((u+m)*.8)*.05;const factor=Math.max(.72,baseFactor+outlierBoost(u,m,bedrooms,side));
   const own=u===0?ownerUse[m]:Math.max(0,Math.round(ownerUse[m]*(.75+(u%5)*.12)));
   const maintenance=u===0?closed[m]:(u+m)%17===0?2:0;
   const available=days-own-maintenance;
