@@ -22,3 +22,8 @@ Changes:
 - Election procedures pages 3–5 under How to Vote, reproduced unchanged, plus printable PDF.
 - Complete interactive Our Plan page at our-plan/index.html, with prominent homepage access and links on relevant pages.
 - The plan is included locally so readers do not need access to the separate private preview site.
+
+
+## v78 update
+- Added `rental-program-performance/index.html` containing the Seaspray Financial & Rental Revenue Explorer.
+- Added a `Rental Program Performance` link directly below the homepage `Explore the Complete Plan` button.
